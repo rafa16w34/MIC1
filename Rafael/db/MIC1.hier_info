@@ -1,0 +1,8 @@
+|full_adder_1bit
+Soma <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Vem-Um => inst5.IN0
+A => inst1.IN0
+B => inst1.IN1
+Vai-Um <= <GND>
+
+

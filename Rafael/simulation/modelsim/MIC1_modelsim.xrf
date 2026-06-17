@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Aluno/Desktop/Rafael/Rafael/DECODER_2T04.bdf
+source_file = 1, C:/Users/Aluno/Desktop/Rafael/Rafael/DECODER_2T04.vwf
+source_file = 1, C:/Users/Aluno/Desktop/Rafael/Rafael/full_adder_1bit.bdf
+source_file = 1, C:/Users/Aluno/Desktop/Rafael/Rafael/db/MIC1.cbx.xml
+design_name = full_adder_1bit
+instance = comp, \A~I , A, full_adder_1bit, 1
+instance = comp, \B~I , B, full_adder_1bit, 1
+instance = comp, \Vem-Um~I , Vem-Um, full_adder_1bit, 1
+instance = comp, \inst5~0 , inst5~0, full_adder_1bit, 1
+instance = comp, \Soma~I , Soma, full_adder_1bit, 1
+instance = comp, \Vai-Um~I , Vai-Um, full_adder_1bit, 1
