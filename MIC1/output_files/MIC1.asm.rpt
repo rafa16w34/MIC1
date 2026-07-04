@@ -1,5 +1,5 @@
 Assembler report for MIC1
-Tue Jun 16 08:36:53 2026
+Wed Jul 01 15:45:11 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Aluno/Desktop/Rafael/Rafael/output_files/MIC1.sof
-  6. Assembler Device Options: C:/Users/Aluno/Desktop/Rafael/Rafael/output_files/MIC1.pof
+  5. Assembler Device Options: C:/Users/Aluno/Rafael/output_files/MIC1.sof
+  6. Assembler Device Options: C:/Users/Aluno/Rafael/output_files/MIC1.pof
   7. Assembler Messages
 
 
@@ -38,11 +38,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 16 08:36:53 2026 ;
+; Assembler Status      ; Successful - Wed Jul 01 15:45:11 2026 ;
 ; Revision Name         ; MIC1                                  ;
-; Top-level Entity Name ; full_adder_1bit                       ;
+; Top-level Entity Name ; ULA_32bit                             ;
 ; Family                ; Cyclone II                            ;
-; Device                ; EP2C5T144C6                           ;
+; Device                ; EP2C8F256C6                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------+
-; Assembler Generated Files                                  ;
-+------------------------------------------------------------+
-; File Name                                                  ;
-+------------------------------------------------------------+
-; C:/Users/Aluno/Desktop/Rafael/Rafael/output_files/MIC1.sof ;
-; C:/Users/Aluno/Desktop/Rafael/Rafael/output_files/MIC1.pof ;
-+------------------------------------------------------------+
++---------------------------------------------+
+; Assembler Generated Files                   ;
++---------------------------------------------+
+; File Name                                   ;
++---------------------------------------------+
+; C:/Users/Aluno/Rafael/output_files/MIC1.sof ;
+; C:/Users/Aluno/Rafael/output_files/MIC1.pof ;
++---------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Aluno/Desktop/Rafael/Rafael/output_files/MIC1.sof ;
-+----------------+---------------------------------------------------------------------+
-; Option         ; Setting                                                             ;
-+----------------+---------------------------------------------------------------------+
-; Device         ; EP2C5T144C6                                                         ;
-; JTAG usercode  ; 0x00073310                                                          ;
-; Checksum       ; 0x00073310                                                          ;
-+----------------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Aluno/Rafael/output_files/MIC1.sof ;
++----------------+------------------------------------------------------+
+; Option         ; Setting                                              ;
++----------------+------------------------------------------------------+
+; Device         ; EP2C8F256C6                                          ;
+; JTAG usercode  ; 0x000DAEC8                                           ;
+; Checksum       ; 0x000DAEC8                                           ;
++----------------+------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Aluno/Desktop/Rafael/Rafael/output_files/MIC1.pof ;
-+--------------------+-----------------------------------------------------------------+
-; Option             ; Setting                                                         ;
-+--------------------+-----------------------------------------------------------------+
-; Device             ; EPCS4                                                           ;
-; JTAG usercode      ; 0x00000000                                                      ;
-; Checksum           ; 0x07533D52                                                      ;
-; Compression Ratio  ; 3                                                               ;
-+--------------------+-----------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Aluno/Rafael/output_files/MIC1.pof ;
++--------------------+--------------------------------------------------+
+; Option             ; Setting                                          ;
++--------------------+--------------------------------------------------+
+; Device             ; EPCS4                                            ;
+; JTAG usercode      ; 0x00000000                                       ;
+; Checksum           ; 0x06ECDE17                                       ;
+; Compression Ratio  ; 3                                                ;
++--------------------+--------------------------------------------------+
 
 
 +--------------------+
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 16 08:36:52 2026
+    Info: Processing started: Wed Jul 01 15:45:10 2026
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MIC1 -c MIC1
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 352 megabytes
-    Info: Processing ended: Tue Jun 16 08:36:53 2026
+    Info: Peak virtual memory: 364 megabytes
+    Info: Processing ended: Wed Jul 01 15:45:11 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

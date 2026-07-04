@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 144 88 312 104)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A" (rect 5 0 14 12)(font "Arial" ))
+	(text "A" (rect 5 0 13 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 144 104 312 120)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "B" (rect 5 0 13 12)(font "Arial" ))
+	(text "B" (rect 5 0 12 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 504 -160 520 8)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "Vem-Um" (rect 4 5 16 49)(font "Arial" )(vertical))
+	(text "Vem-Um" (rect 4 5 16 48)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -282,10 +282,6 @@ applicable agreement for further details.
 	(pt 328 168)
 )
 (connector
-	(pt 328 168)
-	(pt 328 176)
-)
-(connector
 	(pt 312 112)
 	(pt 344 112)
 )
@@ -296,10 +292,6 @@ applicable agreement for further details.
 (connector
 	(pt 344 112)
 	(pt 344 168)
-)
-(connector
-	(pt 344 168)
-	(pt 344 176)
 )
 (connector
 	(pt 512 88)
@@ -326,16 +318,8 @@ applicable agreement for further details.
 	(pt 424 280)
 )
 (connector
-	(pt 424 280)
-	(pt 424 288)
-)
-(connector
 	(pt 504 280)
 	(pt 440 280)
-)
-(connector
-	(pt 504 216)
-	(pt 504 224)
 )
 (connector
 	(pt 504 224)
@@ -358,11 +342,7 @@ applicable agreement for further details.
 	(pt 640 96)
 )
 (junction (pt 328 96))
-(junction (pt 328 168))
 (junction (pt 344 112))
-(junction (pt 344 168))
 (junction (pt 512 88))
 (junction (pt 496 104))
-(junction (pt 424 280))
-(junction (pt 504 224))
 (junction (pt 512 8))

@@ -1,5 +1,5 @@
 Simulator report for MIC1
-Tue Jun 16 08:38:59 2026
+Wed Jul 01 15:47:11 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,43 +44,42 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 6 nodes      ;
-; Simulation Coverage         ;      66.67 % ;
-; Total Number of Transitions ; 33           ;
+; Simulation End Time         ; 2.0 us       ;
+; Simulation Netlist Size     ; 26 nodes     ;
+; Simulation Coverage         ;      69.23 % ;
+; Total Number of Transitions ; 188          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
-; Device                      ; EP2C5T144C6  ;
 +-----------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                                    ;
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
-; Option                                                                                     ; Setting                                                  ; Default Value ;
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Timing                                                   ; Timing        ;
-; Start time                                                                                 ; 0 ns                                                     ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                                      ;               ;
-; Vector input source                                                                        ; C:/Users/Aluno/Desktop/Rafael/Rafael/full_adder_1bit.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                                       ; On            ;
-; Check outputs                                                                              ; Off                                                      ; Off           ;
-; Report simulation coverage                                                                 ; On                                                       ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                                       ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                                       ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                                       ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                                      ; Off           ;
-; Detect glitches                                                                            ; Off                                                      ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                                      ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                                      ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                      ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                                      ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                       ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                               ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                      ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                      ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                     ; Auto          ;
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                              ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Option                                                                                     ; Setting                            ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                         ; Timing        ;
+; Start time                                                                                 ; 0 ns                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                ;               ;
+; Vector input source                                                                        ; C:/Users/Aluno/Rafael/ULA_1bit.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                 ; On            ;
+; Check outputs                                                                              ; Off                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                ; Off           ;
+; Detect glitches                                                                            ; Off                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                               ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
 
 
 +----------------------+
@@ -95,48 +94,71 @@ Please use Quartus II 32-bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      66.67 % ;
-; Total nodes checked                                 ; 6            ;
-; Total output ports checked                          ; 6            ;
-; Total output ports with complete 1/0-value coverage ; 4            ;
-; Total output ports with no 1/0-value coverage       ; 1            ;
-; Total output ports with no 1-value coverage         ; 1            ;
-; Total output ports with no 0-value coverage         ; 2            ;
+; Total coverage as a percentage                      ;      69.23 % ;
+; Total nodes checked                                 ; 26           ;
+; Total output ports checked                          ; 26           ;
+; Total output ports with complete 1/0-value coverage ; 18           ;
+; Total output ports with no 1/0-value coverage       ; 4            ;
+; Total output ports with no 1-value coverage         ; 5            ;
+; Total output ports with no 0-value coverage         ; 7            ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                  ;
-+--------------------------+--------------------------------+------------------+
-; Node Name                ; Output Port Name               ; Output Port Type ;
-+--------------------------+--------------------------------+------------------+
-; |full_adder_1bit|inst5~0 ; |full_adder_1bit|inst5~0       ; combout          ;
-; |full_adder_1bit|Soma    ; |full_adder_1bit|Soma          ; padio            ;
-; |full_adder_1bit|Vem-Um  ; |full_adder_1bit|Vem-Um~corein ; combout          ;
-; |full_adder_1bit|B       ; |full_adder_1bit|B~corein      ; combout          ;
-+--------------------------+--------------------------------+------------------+
++--------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                      ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |ULA_1bit|OUTPUT                      ; |ULA_1bit|OUTPUT                      ; pin_out          ;
+; |ULA_1bit|inst11                      ; |ULA_1bit|inst11                      ; out0             ;
+; |ULA_1bit|inst10                      ; |ULA_1bit|inst10                      ; out0             ;
+; |ULA_1bit|inst6                       ; |ULA_1bit|inst6                       ; out0             ;
+; |ULA_1bit|inst2                       ; |ULA_1bit|inst2                       ; out0             ;
+; |ULA_1bit|inst3                       ; |ULA_1bit|inst3                       ; out0             ;
+; |ULA_1bit|A                           ; |ULA_1bit|A                           ; out              ;
+; |ULA_1bit|inst4                       ; |ULA_1bit|inst4                       ; out0             ;
+; |ULA_1bit|B                           ; |ULA_1bit|B                           ; out              ;
+; |ULA_1bit|F1                          ; |ULA_1bit|F1                          ; out              ;
+; |ULA_1bit|inst8                       ; |ULA_1bit|inst8                       ; out0             ;
+; |ULA_1bit|inst12                      ; |ULA_1bit|inst12                      ; out0             ;
+; |ULA_1bit|inst9                       ; |ULA_1bit|inst9                       ; out0             ;
+; |ULA_1bit|inst5                       ; |ULA_1bit|inst5                       ; out0             ;
+; |ULA_1bit|full_adder_1bit:inst1|inst5 ; |ULA_1bit|full_adder_1bit:inst1|inst5 ; out0             ;
+; |ULA_1bit|full_adder_1bit:inst1|inst1 ; |ULA_1bit|full_adder_1bit:inst1|inst1 ; out0             ;
+; |ULA_1bit|decoder_2t04:inst|inst6     ; |ULA_1bit|decoder_2t04:inst|inst6     ; out0             ;
+; |ULA_1bit|decoder_2t04:inst|inst7     ; |ULA_1bit|decoder_2t04:inst|inst7     ; out0             ;
++---------------------------------------+---------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+----------------------------------------------------------------------+
-; Missing 1-Value Coverage                                             ;
-+-------------------------+-------------------------+------------------+
-; Node Name               ; Output Port Name        ; Output Port Type ;
-+-------------------------+-------------------------+------------------+
-; |full_adder_1bit|Vai-Um ; |full_adder_1bit|Vai-Um ; padio            ;
-+-------------------------+-------------------------+------------------+
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |ULA_1bit|INVA                    ; |ULA_1bit|INVA                    ; out              ;
+; |ULA_1bit|ENA                     ; |ULA_1bit|ENA                     ; out              ;
+; |ULA_1bit|ENB                     ; |ULA_1bit|ENB                     ; out              ;
+; |ULA_1bit|COUT                    ; |ULA_1bit|COUT                    ; pin_out          ;
+; |ULA_1bit|decoder_2t04:inst|inst8 ; |ULA_1bit|decoder_2t04:inst|inst8 ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                               ;
-+-------------------------+---------------------------+------------------+
-; Node Name               ; Output Port Name          ; Output Port Type ;
-+-------------------------+---------------------------+------------------+
-; |full_adder_1bit|Vai-Um ; |full_adder_1bit|Vai-Um   ; padio            ;
-; |full_adder_1bit|A      ; |full_adder_1bit|A~corein ; combout          ;
-+-------------------------+---------------------------+------------------+
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |ULA_1bit|INVA                    ; |ULA_1bit|INVA                    ; out              ;
+; |ULA_1bit|ENA                     ; |ULA_1bit|ENA                     ; out              ;
+; |ULA_1bit|ENB                     ; |ULA_1bit|ENB                     ; out              ;
+; |ULA_1bit|F0                      ; |ULA_1bit|F0                      ; out              ;
+; |ULA_1bit|CIN                     ; |ULA_1bit|CIN                     ; out              ;
+; |ULA_1bit|COUT                    ; |ULA_1bit|COUT                    ; pin_out          ;
+; |ULA_1bit|decoder_2t04:inst|inst5 ; |ULA_1bit|decoder_2t04:inst|inst5 ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
 
 
 +---------------------+
@@ -152,18 +174,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 16 08:38:58 2026
+    Info: Processing started: Wed Jul 01 15:47:10 2026
 Info: Command: quartus_sim --simulation_results_format=VWF MIC1 -c MIC1
-Info (324025): Using vector source file "C:/Users/Aluno/Desktop/Rafael/Rafael/full_adder_1bit.vwf"
+Info (324025): Using vector source file "C:/Users/Aluno/Rafael/ULA_1bit.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      66.67 %
-Info (328052): Number of transitions in simulation is 33
+Info (328053): Simulation coverage is      69.23 %
+Info (328052): Number of transitions in simulation is 188
 Info (324045): Vector file MIC1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 280 megabytes
-    Info: Processing ended: Tue Jun 16 08:38:59 2026
+    Info: Peak virtual memory: 265 megabytes
+    Info: Processing ended: Wed Jul 01 15:47:11 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
