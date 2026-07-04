@@ -1,4 +1,4 @@
-# MIC1 — Projeto Quartus (ULA e Decoder)
+# MIC1 
 
 Projeto no Quartus II (v13.0) que implementa, em diagramas de blocos (`.bdf`), partes da arquitetura **MIC-1** descrita no livro *Structured Computer Organization* (Tanenbaum): um decoder 2-para-4, um somador completo de 1 bit e ULAs de 1, 8 e 32 bits. Elaborado durantes as aulas de laboratório de Arquitetura e Organização de Computadores I, pelo grupo composto por Rafael Alves Faria, Gabriel Alves Faria e Samuel Pianetti 
 
