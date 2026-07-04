@@ -20,14 +20,14 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 160 112)
-	(text "full_adder_1bit" (rect 5 0 88 14)(font "Arial" (font_size 8)))
+	(rect 16 16 176 112)
+	(text "Full_Adder_1bit" (rect 5 0 93 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 80 25 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "Vem-Um" (rect 0 0 48 14)(font "Arial" (font_size 8)))
-		(text "Vem-Um" (rect 21 27 69 41)(font "Arial" (font_size 8)))
+		(text "Carry_in" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "Carry_in" (rect 21 27 69 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
@@ -45,20 +45,20 @@ applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
-		(pt 144 32)
+		(pt 160 32)
 		(output)
-		(text "Soma" (rect 0 0 31 14)(font "Arial" (font_size 8)))
-		(text "Soma" (rect 92 27 123 41)(font "Arial" (font_size 8)))
-		(line (pt 144 32)(pt 128 32))
+		(text "Sum" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "Sum" (rect 115 27 139 41)(font "Arial" (font_size 8)))
+		(line (pt 160 32)(pt 144 32))
 	)
 	(port
-		(pt 144 48)
+		(pt 160 48)
 		(output)
-		(text "Vai-Um" (rect 0 0 41 14)(font "Arial" (font_size 8)))
-		(text "Vai-Um" (rect 82 43 123 57)(font "Arial" (font_size 8)))
-		(line (pt 144 48)(pt 128 48))
+		(text "Carry_out" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "Carry_out" (rect 83 43 139 57)(font "Arial" (font_size 8)))
+		(line (pt 160 48)(pt 144 48))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 80))
+		(rectangle (rect 16 16 144 80))
 	)
 )
