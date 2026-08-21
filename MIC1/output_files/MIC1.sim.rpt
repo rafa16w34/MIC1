@@ -1,5 +1,5 @@
 Simulator report for MIC1
-Fri Aug 21 10:49:55 2026
+Fri Aug 21 12:16:26 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,42 +45,42 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 22 nodes     ;
-; Simulation Coverage         ;       0.00 % ;
-; Total Number of Transitions ; 0            ;
+; Simulation Netlist Size     ; 42 nodes     ;
+; Simulation Coverage         ;      40.48 % ;
+; Total Number of Transitions ; 79           ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 ; Device                      ; EP2C5T144C6  ;
 +-----------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                 ;
-+--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
-; Option                                                                                     ; Setting                               ; Default Value ;
-+--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
-; Simulation mode                                                                            ; Timing                                ; Timing        ;
-; Start time                                                                                 ; 0 ns                                  ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                   ;               ;
-; Vector input source                                                                        ; C:/Users/Aluno/RafaelAlves/MEMORY.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                    ; On            ;
-; Check outputs                                                                              ; Off                                   ; Off           ;
-; Report simulation coverage                                                                 ; On                                    ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                    ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                    ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                    ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                   ; Off           ;
-; Detect glitches                                                                            ; Off                                   ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                   ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                   ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                   ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                   ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                    ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                            ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                   ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                   ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                  ; Auto          ;
-+--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                   ;
++--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
+; Option                                                                                     ; Setting                                 ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                    ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                     ;               ;
+; Vector input source                                                                        ; C:/Users/Aluno/RafaelAlves/MEMORY_A.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                      ; On            ;
+; Check outputs                                                                              ; Off                                     ; Off           ;
+; Report simulation coverage                                                                 ; On                                      ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                      ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                      ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                      ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                     ; Off           ;
+; Detect glitches                                                                            ; Off                                     ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                     ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                     ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                     ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                     ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                      ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                              ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                     ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                     ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                    ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
 
 
 +----------------------+
@@ -95,80 +95,101 @@ Please use Quartus II 32-bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;       0.00 % ;
-; Total nodes checked                                 ; 22           ;
-; Total output ports checked                          ; 20           ;
-; Total output ports with complete 1/0-value coverage ; 0            ;
-; Total output ports with no 1/0-value coverage       ; 20           ;
-; Total output ports with no 1-value coverage         ; 20           ;
-; Total output ports with no 0-value coverage         ; 20           ;
+; Total coverage as a percentage                      ;      40.48 % ;
+; Total nodes checked                                 ; 42           ;
+; Total output ports checked                          ; 42           ;
+; Total output ports with complete 1/0-value coverage ; 17           ;
+; Total output ports with no 1/0-value coverage       ; 18           ;
+; Total output ports with no 1-value coverage         ; 18           ;
+; Total output ports with no 0-value coverage         ; 25           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+-------------------------------------------------+
-; Complete 1/0-Value Coverage                     ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++--------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                        ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |MEMORY|inst634~0      ; |MEMORY|inst634~0      ; combout          ;
+; |MEMORY|inst634~1      ; |MEMORY|inst634~1      ; combout          ;
+; |MEMORY|inst36~0       ; |MEMORY|inst36~0       ; combout          ;
+; |MEMORY|inst632~0      ; |MEMORY|inst632~0      ; combout          ;
+; |MEMORY|inst632~1      ; |MEMORY|inst632~1      ; combout          ;
+; |MEMORY|inst631~0      ; |MEMORY|inst631~0      ; combout          ;
+; |MEMORY|inst631~1      ; |MEMORY|inst631~1      ; combout          ;
+; |MEMORY|inst21         ; |MEMORY|inst21         ; combout          ;
+; |MEMORY|inst12         ; |MEMORY|inst12         ; combout          ;
+; |MEMORY|O2             ; |MEMORY|O2             ; padio            ;
+; |MEMORY|O1             ; |MEMORY|O1             ; padio            ;
+; |MEMORY|O0             ; |MEMORY|O0             ; padio            ;
+; |MEMORY|CS             ; |MEMORY|CS~corein      ; combout          ;
+; |MEMORY|RD             ; |MEMORY|RD~corein      ; combout          ;
+; |MEMORY|OE             ; |MEMORY|OE~corein      ; combout          ;
+; |MEMORY|inst21~clkctrl ; |MEMORY|inst21~clkctrl ; outclk           ;
+; |MEMORY|inst12~clkctrl ; |MEMORY|inst12~clkctrl ; outclk           ;
++------------------------+------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+------------------------------------------------------------+
-; Missing 1-Value Coverage                                   ;
-+-------------------+---------------------+------------------+
-; Node Name         ; Output Port Name    ; Output Port Type ;
-+-------------------+---------------------+------------------+
-; |MEMORY|inst17    ; |MEMORY|inst17      ; regout           ;
-; |MEMORY|inst18    ; |MEMORY|inst18      ; regout           ;
-; |MEMORY|inst      ; |MEMORY|inst        ; regout           ;
-; |MEMORY|inst16    ; |MEMORY|inst16      ; regout           ;
-; |MEMORY|inst631~0 ; |MEMORY|inst631~0   ; combout          ;
-; |MEMORY|inst631~1 ; |MEMORY|inst631~1   ; combout          ;
-; |MEMORY|inst36~0  ; |MEMORY|inst36~0    ; combout          ;
-; |MEMORY|inst12    ; |MEMORY|inst12      ; combout          ;
-; |MEMORY|inst21    ; |MEMORY|inst21      ; combout          ;
-; |MEMORY|inst3     ; |MEMORY|inst3       ; combout          ;
-; |MEMORY|inst9     ; |MEMORY|inst9       ; combout          ;
-; |MEMORY|O[2]      ; |MEMORY|O[2]        ; padio            ;
-; |MEMORY|O[1]      ; |MEMORY|O[1]        ; padio            ;
-; |MEMORY|O[0]      ; |MEMORY|O[0]        ; padio            ;
-; |MEMORY|A[0]      ; |MEMORY|A[0]~corein ; combout          ;
-; |MEMORY|A[1]      ; |MEMORY|A[1]~corein ; combout          ;
-; |MEMORY|CS        ; |MEMORY|CS~corein   ; combout          ;
-; |MEMORY|RD        ; |MEMORY|RD~corein   ; combout          ;
-; |MEMORY|OE        ; |MEMORY|OE~corein   ; combout          ;
-; |MEMORY|I[2]      ; |MEMORY|I[2]~corein ; combout          ;
-+-------------------+---------------------+------------------+
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |MEMORY|inst8         ; |MEMORY|inst8         ; regout           ;
+; |MEMORY|inst2         ; |MEMORY|inst2         ; regout           ;
+; |MEMORY|inst7         ; |MEMORY|inst7         ; regout           ;
+; |MEMORY|inst1         ; |MEMORY|inst1         ; regout           ;
+; |MEMORY|inst16        ; |MEMORY|inst16        ; regout           ;
+; |MEMORY|inst          ; |MEMORY|inst          ; regout           ;
+; |MEMORY|inst9         ; |MEMORY|inst9         ; combout          ;
+; |MEMORY|inst3         ; |MEMORY|inst3         ; combout          ;
+; |MEMORY|A1            ; |MEMORY|A1~corein     ; combout          ;
+; |MEMORY|I2            ; |MEMORY|I2~corein     ; combout          ;
+; |MEMORY|I1            ; |MEMORY|I1~corein     ; combout          ;
+; |MEMORY|I0            ; |MEMORY|I0~corein     ; combout          ;
+; |MEMORY|inst9~clkctrl ; |MEMORY|inst9~clkctrl ; outclk           ;
+; |MEMORY|inst3~clkctrl ; |MEMORY|inst3~clkctrl ; outclk           ;
+; |MEMORY|inst20~feeder ; |MEMORY|inst20~feeder ; combout          ;
+; |MEMORY|inst11~feeder ; |MEMORY|inst11~feeder ; combout          ;
+; |MEMORY|inst10~feeder ; |MEMORY|inst10~feeder ; combout          ;
+; |MEMORY|inst17~feeder ; |MEMORY|inst17~feeder ; combout          ;
++-----------------------+-----------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------+
-; Missing 0-Value Coverage                                   ;
-+-------------------+---------------------+------------------+
-; Node Name         ; Output Port Name    ; Output Port Type ;
-+-------------------+---------------------+------------------+
-; |MEMORY|inst17    ; |MEMORY|inst17      ; regout           ;
-; |MEMORY|inst18    ; |MEMORY|inst18      ; regout           ;
-; |MEMORY|inst      ; |MEMORY|inst        ; regout           ;
-; |MEMORY|inst16    ; |MEMORY|inst16      ; regout           ;
-; |MEMORY|inst631~0 ; |MEMORY|inst631~0   ; combout          ;
-; |MEMORY|inst631~1 ; |MEMORY|inst631~1   ; combout          ;
-; |MEMORY|inst36~0  ; |MEMORY|inst36~0    ; combout          ;
-; |MEMORY|inst12    ; |MEMORY|inst12      ; combout          ;
-; |MEMORY|inst21    ; |MEMORY|inst21      ; combout          ;
-; |MEMORY|inst3     ; |MEMORY|inst3       ; combout          ;
-; |MEMORY|inst9     ; |MEMORY|inst9       ; combout          ;
-; |MEMORY|O[2]      ; |MEMORY|O[2]        ; padio            ;
-; |MEMORY|O[1]      ; |MEMORY|O[1]        ; padio            ;
-; |MEMORY|O[0]      ; |MEMORY|O[0]        ; padio            ;
-; |MEMORY|A[0]      ; |MEMORY|A[0]~corein ; combout          ;
-; |MEMORY|A[1]      ; |MEMORY|A[1]~corein ; combout          ;
-; |MEMORY|CS        ; |MEMORY|CS~corein   ; combout          ;
-; |MEMORY|RD        ; |MEMORY|RD~corein   ; combout          ;
-; |MEMORY|OE        ; |MEMORY|OE~corein   ; combout          ;
-; |MEMORY|I[2]      ; |MEMORY|I[2]~corein ; combout          ;
-+-------------------+---------------------+------------------+
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |MEMORY|inst8         ; |MEMORY|inst8         ; regout           ;
+; |MEMORY|inst20        ; |MEMORY|inst20        ; regout           ;
+; |MEMORY|inst2         ; |MEMORY|inst2         ; regout           ;
+; |MEMORY|inst11        ; |MEMORY|inst11        ; regout           ;
+; |MEMORY|inst7         ; |MEMORY|inst7         ; regout           ;
+; |MEMORY|inst1         ; |MEMORY|inst1         ; regout           ;
+; |MEMORY|inst19        ; |MEMORY|inst19        ; regout           ;
+; |MEMORY|inst10        ; |MEMORY|inst10        ; regout           ;
+; |MEMORY|inst16        ; |MEMORY|inst16        ; regout           ;
+; |MEMORY|inst          ; |MEMORY|inst          ; regout           ;
+; |MEMORY|inst18        ; |MEMORY|inst18        ; regout           ;
+; |MEMORY|inst17        ; |MEMORY|inst17        ; regout           ;
+; |MEMORY|inst9         ; |MEMORY|inst9         ; combout          ;
+; |MEMORY|inst3         ; |MEMORY|inst3         ; combout          ;
+; |MEMORY|A0            ; |MEMORY|A0~corein     ; combout          ;
+; |MEMORY|A1            ; |MEMORY|A1~corein     ; combout          ;
+; |MEMORY|I2            ; |MEMORY|I2~corein     ; combout          ;
+; |MEMORY|I1            ; |MEMORY|I1~corein     ; combout          ;
+; |MEMORY|I0            ; |MEMORY|I0~corein     ; combout          ;
+; |MEMORY|inst9~clkctrl ; |MEMORY|inst9~clkctrl ; outclk           ;
+; |MEMORY|inst3~clkctrl ; |MEMORY|inst3~clkctrl ; outclk           ;
+; |MEMORY|inst20~feeder ; |MEMORY|inst20~feeder ; combout          ;
+; |MEMORY|inst11~feeder ; |MEMORY|inst11~feeder ; combout          ;
+; |MEMORY|inst10~feeder ; |MEMORY|inst10~feeder ; combout          ;
+; |MEMORY|inst17~feeder ; |MEMORY|inst17~feeder ; combout          ;
++-----------------------+-----------------------+------------------+
 
 
 +---------------------+
@@ -184,19 +205,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 21 10:49:54 2026
+    Info: Processing started: Fri Aug 21 12:16:26 2026
 Info: Command: quartus_sim --simulation_results_format=VWF MIC1 -c MIC1
-Info (324025): Using vector source file "C:/Users/Aluno/RafaelAlves/MEMORY.vwf"
+Info (324025): Using vector source file "C:/Users/Aluno/RafaelAlves/MEMORY_A.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is       0.00 %
-Info (328052): Number of transitions in simulation is 0
+Info (328053): Simulation coverage is      40.48 %
+Info (328052): Number of transitions in simulation is 79
 Info (324045): Vector file MIC1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 281 megabytes
-    Info: Processing ended: Fri Aug 21 10:49:55 2026
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Fri Aug 21 12:16:26 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
