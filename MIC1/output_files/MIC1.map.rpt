@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC1
-Fri Aug 21 12:02:55 2026
+Fri Aug 28 10:35:32 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 21 12:02:55 2026           ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 28 10:35:32 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
-; Top-level Entity Name              ; MEMORY                                          ;
+; Top-level Entity Name              ; REGISTER_32bits                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 23                                              ;
-;     Total combinational functions  ; 11                                              ;
-;     Dedicated logic registers      ; 12                                              ;
-; Total registers                    ; 12                                              ;
-; Total pins                         ; 11                                              ;
+; Total logic elements               ; 96                                              ;
+;     Total combinational functions  ; 96                                              ;
+;     Dedicated logic registers      ; 32                                              ;
+; Total registers                    ; 32                                              ;
+; Total pins                         ; 165                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; MEMORY             ; MIC1               ;
+; Top-level entity name                                                      ; REGISTER_32bits    ; MIC1               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -153,13 +153,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------+---------+
-; MEMORY.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/MEMORY.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------+---------+
+; REGISTER_8bit.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/REGISTER_8bit.bdf   ;         ;
+; REGISTER_32bits.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/REGISTER_32bits.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -167,38 +168,42 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 23    ;
+; Estimated Total logic elements              ; 96    ;
 ;                                             ;       ;
-; Total combinational functions               ; 11    ;
+; Total combinational functions               ; 96    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 10    ;
-;     -- 3 input functions                    ; 1     ;
+;     -- 4 input functions                    ; 64    ;
+;     -- 3 input functions                    ; 32    ;
 ;     -- <=2 input functions                  ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 11    ;
+;     -- normal mode                          ; 96    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 12    ;
-;     -- Dedicated logic registers            ; 12    ;
+; Total registers                             ; 32    ;
+;     -- Dedicated logic registers            ; 32    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 11    ;
+; I/O pins                                    ; 165   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; A1    ;
-; Maximum fan-out                             ; 9     ;
-; Total fan-out                               ; 73    ;
-; Average fan-out                             ; 2.15  ;
+; Maximum fan-out node                        ; Load  ;
+; Maximum fan-out                             ; 96    ;
+; Total fan-out                               ; 576   ;
+; Average fan-out                             ; 1.97  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |MEMORY                    ; 11 (11)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |MEMORY             ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |REGISTER_32bits           ; 96 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 165  ; 0            ; |REGISTER_32bits                     ; work         ;
+;    |REGISTER_8bit:inst3|   ; 24 (24)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |REGISTER_32bits|REGISTER_8bit:inst3 ; work         ;
+;    |REGISTER_8bit:inst4|   ; 24 (24)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |REGISTER_32bits|REGISTER_8bit:inst4 ; work         ;
+;    |REGISTER_8bit:inst6|   ; 24 (24)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |REGISTER_32bits|REGISTER_8bit:inst6 ; work         ;
+;    |REGISTER_8bit:inst7|   ; 24 (24)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |REGISTER_32bits|REGISTER_8bit:inst7 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -207,10 +212,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -232,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 21 12:02:54 2026
+    Info: Processing started: Fri Aug 28 10:35:30 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC1 -c MIC1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memory.bdf
@@ -256,17 +261,53 @@ Info (12021): Found 1 design units, including 1 entities, in source file shifter
     Info (12023): Found entity 1: SHIFTER
 Info (12021): Found 1 design units, including 1 entities, in source file register_8bit.bdf
     Info (12023): Found entity 1: REGISTER_8bit
-Info (12127): Elaborating entity "MEMORY" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file register_32bits.bdf
+    Info (12023): Found entity 1: REGISTER_32bits
+Info (12127): Elaborating entity "REGISTER_32bits" for the top level hierarchy
+Info (12128): Elaborating entity "REGISTER_8bit" for hierarchy "REGISTER_8bit:inst3"
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "REGISTER_8bit:inst7|inst23" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst23~_emulated" and latch "REGISTER_8bit:inst7|inst23~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst20" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst20~_emulated" and latch "REGISTER_8bit:inst7|inst20~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst16" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst16~_emulated" and latch "REGISTER_8bit:inst7|inst16~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst13" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst13~_emulated" and latch "REGISTER_8bit:inst7|inst13~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst9" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst9~_emulated" and latch "REGISTER_8bit:inst7|inst9~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst6" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst6~_emulated" and latch "REGISTER_8bit:inst7|inst6~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst3" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst3~_emulated" and latch "REGISTER_8bit:inst7|inst3~1"
+    Warning (13310): Register "REGISTER_8bit:inst7|inst300099" is converted into an equivalent circuit using register "REGISTER_8bit:inst7|inst300099~_emulated" and latch "REGISTER_8bit:inst7|inst300099~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst23" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst23~_emulated" and latch "REGISTER_8bit:inst6|inst23~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst20" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst20~_emulated" and latch "REGISTER_8bit:inst6|inst20~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst16" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst16~_emulated" and latch "REGISTER_8bit:inst6|inst16~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst13" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst13~_emulated" and latch "REGISTER_8bit:inst6|inst13~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst9" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst9~_emulated" and latch "REGISTER_8bit:inst6|inst9~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst6" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst6~_emulated" and latch "REGISTER_8bit:inst6|inst6~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst3" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst3~_emulated" and latch "REGISTER_8bit:inst6|inst3~1"
+    Warning (13310): Register "REGISTER_8bit:inst6|inst300099" is converted into an equivalent circuit using register "REGISTER_8bit:inst6|inst300099~_emulated" and latch "REGISTER_8bit:inst6|inst300099~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst23" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst23~_emulated" and latch "REGISTER_8bit:inst4|inst23~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst20" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst20~_emulated" and latch "REGISTER_8bit:inst4|inst20~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst16" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst16~_emulated" and latch "REGISTER_8bit:inst4|inst16~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst13" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst13~_emulated" and latch "REGISTER_8bit:inst4|inst13~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst9" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst9~_emulated" and latch "REGISTER_8bit:inst4|inst9~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst6" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst6~_emulated" and latch "REGISTER_8bit:inst4|inst6~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst3" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst3~_emulated" and latch "REGISTER_8bit:inst4|inst3~1"
+    Warning (13310): Register "REGISTER_8bit:inst4|inst300099" is converted into an equivalent circuit using register "REGISTER_8bit:inst4|inst300099~_emulated" and latch "REGISTER_8bit:inst4|inst300099~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst23" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst23~_emulated" and latch "REGISTER_8bit:inst3|inst23~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst20" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst20~_emulated" and latch "REGISTER_8bit:inst3|inst20~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst16" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst16~_emulated" and latch "REGISTER_8bit:inst3|inst16~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst13" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst13~_emulated" and latch "REGISTER_8bit:inst3|inst13~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst9" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst9~_emulated" and latch "REGISTER_8bit:inst3|inst9~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst6" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst6~_emulated" and latch "REGISTER_8bit:inst3|inst6~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst3" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst3~_emulated" and latch "REGISTER_8bit:inst3|inst3~1"
+    Warning (13310): Register "REGISTER_8bit:inst3|inst300099" is converted into an equivalent circuit using register "REGISTER_8bit:inst3|inst300099~_emulated" and latch "REGISTER_8bit:inst3|inst300099~1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 23 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 380 megabytes
-    Info: Processing ended: Fri Aug 21 12:02:55 2026
-    Info: Elapsed time: 00:00:01
+Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 101 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 96 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 364 megabytes
+    Info: Processing ended: Fri Aug 28 10:35:32 2026
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
