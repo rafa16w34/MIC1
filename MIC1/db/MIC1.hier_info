@@ -1,4 +1,118 @@
-|REGISTER_32bits
+|TOS
+B[0] <= REGISTER_32bits:inst.OUTPUTA[0]
+B[1] <= REGISTER_32bits:inst.OUTPUTA[1]
+B[2] <= REGISTER_32bits:inst.OUTPUTA[2]
+B[3] <= REGISTER_32bits:inst.OUTPUTA[3]
+B[4] <= REGISTER_32bits:inst.OUTPUTA[4]
+B[5] <= REGISTER_32bits:inst.OUTPUTA[5]
+B[6] <= REGISTER_32bits:inst.OUTPUTA[6]
+B[7] <= REGISTER_32bits:inst.OUTPUTA[7]
+B[8] <= REGISTER_32bits:inst.OUTPUTA[8]
+B[9] <= REGISTER_32bits:inst.OUTPUTA[9]
+B[10] <= REGISTER_32bits:inst.OUTPUTA[10]
+B[11] <= REGISTER_32bits:inst.OUTPUTA[11]
+B[12] <= REGISTER_32bits:inst.OUTPUTA[12]
+B[13] <= REGISTER_32bits:inst.OUTPUTA[13]
+B[14] <= REGISTER_32bits:inst.OUTPUTA[14]
+B[15] <= REGISTER_32bits:inst.OUTPUTA[15]
+B[16] <= REGISTER_32bits:inst.OUTPUTA[16]
+B[17] <= REGISTER_32bits:inst.OUTPUTA[17]
+B[18] <= REGISTER_32bits:inst.OUTPUTA[18]
+B[19] <= REGISTER_32bits:inst.OUTPUTA[19]
+B[20] <= REGISTER_32bits:inst.OUTPUTA[20]
+B[21] <= REGISTER_32bits:inst.OUTPUTA[21]
+B[22] <= REGISTER_32bits:inst.OUTPUTA[22]
+B[23] <= REGISTER_32bits:inst.OUTPUTA[23]
+B[24] <= REGISTER_32bits:inst.OUTPUTA[24]
+B[25] <= REGISTER_32bits:inst.OUTPUTA[25]
+B[26] <= REGISTER_32bits:inst.OUTPUTA[26]
+B[27] <= REGISTER_32bits:inst.OUTPUTA[27]
+B[28] <= REGISTER_32bits:inst.OUTPUTA[28]
+B[29] <= REGISTER_32bits:inst.OUTPUTA[29]
+B[30] <= REGISTER_32bits:inst.OUTPUTA[30]
+B[31] <= REGISTER_32bits:inst.OUTPUTA[31]
+REG_WRITE[0] => ~NO_FANOUT~
+REG_WRITE[1] => ~NO_FANOUT~
+REG_WRITE[2] => ~NO_FANOUT~
+REG_WRITE[3] => ~NO_FANOUT~
+REG_WRITE[4] => ~NO_FANOUT~
+REG_WRITE[5] => ~NO_FANOUT~
+REG_WRITE[6] => inst1.IN0
+REG_WRITE[7] => ~NO_FANOUT~
+REG_WRITE[8] => ~NO_FANOUT~
+CLOCK => inst1.IN1
+LOAD => REGISTER_32bits:inst.Load
+REG_READ[0] => inst3.IN0
+REG_READ[1] => inst5.IN0
+REG_READ[2] => inst4.IN0
+REG_READ[3] => inst100.IN3
+C[0] => REGISTER_32bits:inst.A[0]
+C[1] => REGISTER_32bits:inst.A[1]
+C[2] => REGISTER_32bits:inst.A[2]
+C[3] => REGISTER_32bits:inst.A[3]
+C[4] => REGISTER_32bits:inst.A[4]
+C[5] => REGISTER_32bits:inst.A[5]
+C[6] => REGISTER_32bits:inst.A[6]
+C[7] => REGISTER_32bits:inst.A[7]
+C[8] => REGISTER_32bits:inst.A[8]
+C[9] => REGISTER_32bits:inst.A[9]
+C[10] => REGISTER_32bits:inst.A[10]
+C[11] => REGISTER_32bits:inst.A[11]
+C[12] => REGISTER_32bits:inst.A[12]
+C[13] => REGISTER_32bits:inst.A[13]
+C[14] => REGISTER_32bits:inst.A[14]
+C[15] => REGISTER_32bits:inst.A[15]
+C[16] => REGISTER_32bits:inst.A[16]
+C[17] => REGISTER_32bits:inst.A[17]
+C[18] => REGISTER_32bits:inst.A[18]
+C[19] => REGISTER_32bits:inst.A[19]
+C[20] => REGISTER_32bits:inst.A[20]
+C[21] => REGISTER_32bits:inst.A[21]
+C[22] => REGISTER_32bits:inst.A[22]
+C[23] => REGISTER_32bits:inst.A[23]
+C[24] => REGISTER_32bits:inst.A[24]
+C[25] => REGISTER_32bits:inst.A[25]
+C[26] => REGISTER_32bits:inst.A[26]
+C[27] => REGISTER_32bits:inst.A[27]
+C[28] => REGISTER_32bits:inst.A[28]
+C[29] => REGISTER_32bits:inst.A[29]
+C[30] => REGISTER_32bits:inst.A[30]
+C[31] => REGISTER_32bits:inst.A[31]
+DATA_IN[0] => REGISTER_32bits:inst.B[0]
+DATA_IN[1] => REGISTER_32bits:inst.B[1]
+DATA_IN[2] => REGISTER_32bits:inst.B[2]
+DATA_IN[3] => REGISTER_32bits:inst.B[3]
+DATA_IN[4] => REGISTER_32bits:inst.B[4]
+DATA_IN[5] => REGISTER_32bits:inst.B[5]
+DATA_IN[6] => REGISTER_32bits:inst.B[6]
+DATA_IN[7] => REGISTER_32bits:inst.B[7]
+DATA_IN[8] => REGISTER_32bits:inst.B[8]
+DATA_IN[9] => REGISTER_32bits:inst.B[9]
+DATA_IN[10] => REGISTER_32bits:inst.B[10]
+DATA_IN[11] => REGISTER_32bits:inst.B[11]
+DATA_IN[12] => REGISTER_32bits:inst.B[12]
+DATA_IN[13] => REGISTER_32bits:inst.B[13]
+DATA_IN[14] => REGISTER_32bits:inst.B[14]
+DATA_IN[15] => REGISTER_32bits:inst.B[15]
+DATA_IN[16] => REGISTER_32bits:inst.B[16]
+DATA_IN[17] => REGISTER_32bits:inst.B[17]
+DATA_IN[18] => REGISTER_32bits:inst.B[18]
+DATA_IN[19] => REGISTER_32bits:inst.B[19]
+DATA_IN[20] => REGISTER_32bits:inst.B[20]
+DATA_IN[21] => REGISTER_32bits:inst.B[21]
+DATA_IN[22] => REGISTER_32bits:inst.B[22]
+DATA_IN[23] => REGISTER_32bits:inst.B[23]
+DATA_IN[24] => REGISTER_32bits:inst.B[24]
+DATA_IN[25] => REGISTER_32bits:inst.B[25]
+DATA_IN[26] => REGISTER_32bits:inst.B[26]
+DATA_IN[27] => REGISTER_32bits:inst.B[27]
+DATA_IN[28] => REGISTER_32bits:inst.B[28]
+DATA_IN[29] => REGISTER_32bits:inst.B[29]
+DATA_IN[30] => REGISTER_32bits:inst.B[30]
+DATA_IN[31] => REGISTER_32bits:inst.B[31]
+
+
+|TOS|REGISTER_32bits:inst
 OUTPUTA[0] <= inst10[0].DB_MAX_OUTPUT_PORT_TYPE
 OUTPUTA[1] <= inst10[1].DB_MAX_OUTPUT_PORT_TYPE
 OUTPUTA[2] <= inst10[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -266,7 +380,7 @@ OUTPUT_ENABLE_B => inst11[1].OE
 OUTPUT_ENABLE_B => inst11[0].OE
 
 
-|REGISTER_32bits|REGISTER_8bit:inst3
+|TOS|REGISTER_32bits:inst|REGISTER_8bit:inst3
 OUT[0] <= inst300099.DB_MAX_OUTPUT_PORT_TYPE
 OUT[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 OUT[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
@@ -325,7 +439,7 @@ IN[6] => inst20.DATAIN
 IN[7] => inst23.DATAIN
 
 
-|REGISTER_32bits|REGISTER_8bit:inst4
+|TOS|REGISTER_32bits:inst|REGISTER_8bit:inst4
 OUT[0] <= inst300099.DB_MAX_OUTPUT_PORT_TYPE
 OUT[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 OUT[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
@@ -384,7 +498,7 @@ IN[6] => inst20.DATAIN
 IN[7] => inst23.DATAIN
 
 
-|REGISTER_32bits|REGISTER_8bit:inst6
+|TOS|REGISTER_32bits:inst|REGISTER_8bit:inst6
 OUT[0] <= inst300099.DB_MAX_OUTPUT_PORT_TYPE
 OUT[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 OUT[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
@@ -443,7 +557,7 @@ IN[6] => inst20.DATAIN
 IN[7] => inst23.DATAIN
 
 
-|REGISTER_32bits|REGISTER_8bit:inst7
+|TOS|REGISTER_32bits:inst|REGISTER_8bit:inst7
 OUT[0] <= inst300099.DB_MAX_OUTPUT_PORT_TYPE
 OUT[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 OUT[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
