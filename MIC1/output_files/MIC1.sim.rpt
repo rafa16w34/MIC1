@@ -1,5 +1,5 @@
 Simulator report for MIC1
-Fri Aug 28 10:37:45 2026
+Fri Sep 11 09:54:55 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,43 +44,43 @@ applicable agreement for further details.
 ; Type                        ; Value         ;
 +-----------------------------+---------------+
 ; Simulation Start Time       ; 0 ps          ;
-; Simulation End Time         ; 1.0 us        ;
-; Simulation Netlist Size     ; 295 nodes     ;
-; Simulation Coverage         ;      45.76 %  ;
-; Total Number of Transitions ; 563           ;
+; Simulation End Time         ; 540.0 ns      ;
+; Simulation Netlist Size     ; 236 nodes     ;
+; Simulation Coverage         ;      33.98 %  ;
+; Total Number of Transitions ; 300           ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; Cyclone II    ;
 ; Device                      ; EP2C15AF484C6 ;
 +-----------------------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                          ;
-+--------------------------------------------------------------------------------------------+------------------------------------------------+---------------+
-; Option                                                                                     ; Setting                                        ; Default Value ;
-+--------------------------------------------------------------------------------------------+------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Timing                                         ; Timing        ;
-; Start time                                                                                 ; 0 ns                                           ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                            ;               ;
-; Vector input source                                                                        ; C:/Users/Aluno/RafaelAlves/REGISTER_32bits.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                             ; On            ;
-; Check outputs                                                                              ; Off                                            ; Off           ;
-; Report simulation coverage                                                                 ; On                                             ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                             ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                             ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                             ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                            ; Off           ;
-; Detect glitches                                                                            ; Off                                            ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                            ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                            ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                            ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                            ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                             ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                     ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                            ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                            ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                           ; Auto          ;
-+--------------------------------------------------------------------------------------------+------------------------------------------------+---------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                              ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Option                                                                                     ; Setting                            ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                             ; Timing        ;
+; Start time                                                                                 ; 0 ns                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                ;               ;
+; Vector input source                                                                        ; C:/Users/Aluno/RafaelAlves/MDR.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                 ; On            ;
+; Check outputs                                                                              ; Off                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                ; Off           ;
+; Detect glitches                                                                            ; Off                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                               ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
 
 
 +----------------------+
@@ -95,432 +95,314 @@ Please use Quartus II 32-bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      45.76 % ;
-; Total nodes checked                                 ; 295          ;
-; Total output ports checked                          ; 295          ;
-; Total output ports with complete 1/0-value coverage ; 135          ;
-; Total output ports with no 1/0-value coverage       ; 96           ;
-; Total output ports with no 1-value coverage         ; 112          ;
-; Total output ports with no 0-value coverage         ; 144          ;
+; Total coverage as a percentage                      ;      33.98 % ;
+; Total nodes checked                                 ; 236          ;
+; Total output ports checked                          ; 206          ;
+; Total output ports with complete 1/0-value coverage ; 70           ;
+; Total output ports with no 1/0-value coverage       ; 67           ;
+; Total output ports with no 1-value coverage         ; 106          ;
+; Total output ports with no 0-value coverage         ; 97           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                      ;
-+-------------------------------------------------------+-------------------------------------------------------+------------------+
-; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
-+-------------------------------------------------------+-------------------------------------------------------+------------------+
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~2         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~2         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~2         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~2         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~2          ; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~2          ; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~2          ; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~2     ; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~2     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~2         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~2         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~2         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~2         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~2          ; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~2          ; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~2          ; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~2     ; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~2     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~2         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~2         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~2         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~2         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~2          ; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~2          ; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~2          ; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~2     ; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~2     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~2         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~2         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~2         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~2         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~2         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~2          ; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~2          ; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~_emulated  ; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~_emulated  ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~2          ; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~2          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~2     ; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~2     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~3         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~3         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~3         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~3         ; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~3          ; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~3          ; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~3          ; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~3     ; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~3     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~3         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~3         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~3         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~3         ; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~3          ; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~3          ; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~3          ; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~3     ; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~3     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~3         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~3         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~3         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~3         ; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~3          ; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~3          ; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~3          ; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~3     ; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~3     ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~3         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~3         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~3         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~3         ; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~3         ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~3          ; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~3          ; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~3          ; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~3          ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~3     ; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~3     ; combout          ;
-; |REGISTER_32bits|OUTPUTA[31]                          ; |REGISTER_32bits|OUTPUTA[31]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[30]                          ; |REGISTER_32bits|OUTPUTA[30]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[29]                          ; |REGISTER_32bits|OUTPUTA[29]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[28]                          ; |REGISTER_32bits|OUTPUTA[28]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[27]                          ; |REGISTER_32bits|OUTPUTA[27]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[25]                          ; |REGISTER_32bits|OUTPUTA[25]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[23]                          ; |REGISTER_32bits|OUTPUTA[23]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[22]                          ; |REGISTER_32bits|OUTPUTA[22]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[21]                          ; |REGISTER_32bits|OUTPUTA[21]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[20]                          ; |REGISTER_32bits|OUTPUTA[20]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[19]                          ; |REGISTER_32bits|OUTPUTA[19]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[17]                          ; |REGISTER_32bits|OUTPUTA[17]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[15]                          ; |REGISTER_32bits|OUTPUTA[15]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[14]                          ; |REGISTER_32bits|OUTPUTA[14]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[13]                          ; |REGISTER_32bits|OUTPUTA[13]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[12]                          ; |REGISTER_32bits|OUTPUTA[12]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[11]                          ; |REGISTER_32bits|OUTPUTA[11]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTA[9]                           ; |REGISTER_32bits|OUTPUTA[9]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTA[7]                           ; |REGISTER_32bits|OUTPUTA[7]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTA[6]                           ; |REGISTER_32bits|OUTPUTA[6]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTA[5]                           ; |REGISTER_32bits|OUTPUTA[5]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTA[4]                           ; |REGISTER_32bits|OUTPUTA[4]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTA[3]                           ; |REGISTER_32bits|OUTPUTA[3]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTA[1]                           ; |REGISTER_32bits|OUTPUTA[1]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[31]                          ; |REGISTER_32bits|OUTPUTB[31]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[30]                          ; |REGISTER_32bits|OUTPUTB[30]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[29]                          ; |REGISTER_32bits|OUTPUTB[29]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[28]                          ; |REGISTER_32bits|OUTPUTB[28]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[27]                          ; |REGISTER_32bits|OUTPUTB[27]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[25]                          ; |REGISTER_32bits|OUTPUTB[25]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[23]                          ; |REGISTER_32bits|OUTPUTB[23]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[22]                          ; |REGISTER_32bits|OUTPUTB[22]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[21]                          ; |REGISTER_32bits|OUTPUTB[21]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[20]                          ; |REGISTER_32bits|OUTPUTB[20]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[19]                          ; |REGISTER_32bits|OUTPUTB[19]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[17]                          ; |REGISTER_32bits|OUTPUTB[17]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[15]                          ; |REGISTER_32bits|OUTPUTB[15]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[14]                          ; |REGISTER_32bits|OUTPUTB[14]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[13]                          ; |REGISTER_32bits|OUTPUTB[13]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[12]                          ; |REGISTER_32bits|OUTPUTB[12]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[11]                          ; |REGISTER_32bits|OUTPUTB[11]                          ; padio            ;
-; |REGISTER_32bits|OUTPUTB[9]                           ; |REGISTER_32bits|OUTPUTB[9]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[7]                           ; |REGISTER_32bits|OUTPUTB[7]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[6]                           ; |REGISTER_32bits|OUTPUTB[6]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[5]                           ; |REGISTER_32bits|OUTPUTB[5]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[4]                           ; |REGISTER_32bits|OUTPUTB[4]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[3]                           ; |REGISTER_32bits|OUTPUTB[3]                           ; padio            ;
-; |REGISTER_32bits|OUTPUTB[1]                           ; |REGISTER_32bits|OUTPUTB[1]                           ; padio            ;
-; |REGISTER_32bits|Load                                 ; |REGISTER_32bits|Load~corein                          ; combout          ;
-; |REGISTER_32bits|OUTPUT_ENABLE_A                      ; |REGISTER_32bits|OUTPUT_ENABLE_A~corein               ; combout          ;
-; |REGISTER_32bits|OUTPUT_ENABLE_B                      ; |REGISTER_32bits|OUTPUT_ENABLE_B~corein               ; combout          ;
-; |REGISTER_32bits|INPUT_SELECT                         ; |REGISTER_32bits|INPUT_SELECT~corein                  ; combout          ;
-; |REGISTER_32bits|CLOCK                                ; |REGISTER_32bits|CLOCK~corein                         ; combout          ;
-; |REGISTER_32bits|CLOCK~clkctrl                        ; |REGISTER_32bits|CLOCK~clkctrl                        ; outclk           ;
-; |REGISTER_32bits|Load~clkctrl                         ; |REGISTER_32bits|Load~clkctrl                         ; outclk           ;
-+-------------------------------------------------------+-------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                            ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst9      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst9      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst16     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst16     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst13     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst13     ; regout           ;
+; |MDR|inst3                                               ; |MDR|inst3                                               ; regout           ;
+; |MDR|REGISTER_32bits:inst|inst5[29]~2                    ; |MDR|REGISTER_32bits:inst|inst5[29]~2                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[28]~3                    ; |MDR|REGISTER_32bits:inst|inst5[28]~3                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[27]~4                    ; |MDR|REGISTER_32bits:inst|inst5[27]~4                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[26]~5                    ; |MDR|REGISTER_32bits:inst|inst5[26]~5                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[25]~6                    ; |MDR|REGISTER_32bits:inst|inst5[25]~6                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[21]~10                   ; |MDR|REGISTER_32bits:inst|inst5[21]~10                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[20]~11                   ; |MDR|REGISTER_32bits:inst|inst5[20]~11                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[19]~12                   ; |MDR|REGISTER_32bits:inst|inst5[19]~12                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[18]~13                   ; |MDR|REGISTER_32bits:inst|inst5[18]~13                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[17]~14                   ; |MDR|REGISTER_32bits:inst|inst5[17]~14                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[14]~17                   ; |MDR|REGISTER_32bits:inst|inst5[14]~17                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[11]~20                   ; |MDR|REGISTER_32bits:inst|inst5[11]~20                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[8]~23                    ; |MDR|REGISTER_32bits:inst|inst5[8]~23                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[7]~24                    ; |MDR|REGISTER_32bits:inst|inst5[7]~24                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[5]~26                    ; |MDR|REGISTER_32bits:inst|inst5[5]~26                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[4]~27                    ; |MDR|REGISTER_32bits:inst|inst5[4]~27                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[2]~29                    ; |MDR|REGISTER_32bits:inst|inst5[2]~29                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[1]~30                    ; |MDR|REGISTER_32bits:inst|inst5[1]~30                    ; combout          ;
+; |MDR|inst100~0                                           ; |MDR|inst100~0                                           ; combout          ;
+; |MDR|inst6                                               ; |MDR|inst6                                               ; combout          ;
+; |MDR|OUT_B[29]                                           ; |MDR|OUT_B[29]                                           ; padio            ;
+; |MDR|OUT_B[28]                                           ; |MDR|OUT_B[28]                                           ; padio            ;
+; |MDR|OUT_B[27]                                           ; |MDR|OUT_B[27]                                           ; padio            ;
+; |MDR|OUT_B[26]                                           ; |MDR|OUT_B[26]                                           ; padio            ;
+; |MDR|OUT_B[25]                                           ; |MDR|OUT_B[25]                                           ; padio            ;
+; |MDR|OUT_B[21]                                           ; |MDR|OUT_B[21]                                           ; padio            ;
+; |MDR|OUT_B[20]                                           ; |MDR|OUT_B[20]                                           ; padio            ;
+; |MDR|OUT_B[19]                                           ; |MDR|OUT_B[19]                                           ; padio            ;
+; |MDR|OUT_B[18]                                           ; |MDR|OUT_B[18]                                           ; padio            ;
+; |MDR|OUT_B[17]                                           ; |MDR|OUT_B[17]                                           ; padio            ;
+; |MDR|OUT_B[14]                                           ; |MDR|OUT_B[14]                                           ; padio            ;
+; |MDR|OUT_B[11]                                           ; |MDR|OUT_B[11]                                           ; padio            ;
+; |MDR|OUT_B[8]                                            ; |MDR|OUT_B[8]                                            ; padio            ;
+; |MDR|OUT_B[7]                                            ; |MDR|OUT_B[7]                                            ; padio            ;
+; |MDR|OUT_B[5]                                            ; |MDR|OUT_B[5]                                            ; padio            ;
+; |MDR|OUT_B[4]                                            ; |MDR|OUT_B[4]                                            ; padio            ;
+; |MDR|OUT_B[2]                                            ; |MDR|OUT_B[2]                                            ; padio            ;
+; |MDR|OUT_B[1]                                            ; |MDR|OUT_B[1]                                            ; padio            ;
+; |MDR|DATA_OUT[28]                                        ; |MDR|DATA_OUT[28]                                        ; padio            ;
+; |MDR|DATA_OUT[27]                                        ; |MDR|DATA_OUT[27]                                        ; padio            ;
+; |MDR|DATA_OUT[25]                                        ; |MDR|DATA_OUT[25]                                        ; padio            ;
+; |MDR|DATA_OUT[20]                                        ; |MDR|DATA_OUT[20]                                        ; padio            ;
+; |MDR|DATA_OUT[19]                                        ; |MDR|DATA_OUT[19]                                        ; padio            ;
+; |MDR|DATA_OUT[17]                                        ; |MDR|DATA_OUT[17]                                        ; padio            ;
+; |MDR|DATA_OUT[11]                                        ; |MDR|DATA_OUT[11]                                        ; padio            ;
+; |MDR|DATA_OUT[8]                                         ; |MDR|DATA_OUT[8]                                         ; padio            ;
+; |MDR|DATA_OUT[7]                                         ; |MDR|DATA_OUT[7]                                         ; padio            ;
+; |MDR|DATA_OUT[5]                                         ; |MDR|DATA_OUT[5]                                         ; padio            ;
+; |MDR|DATA_OUT[4]                                         ; |MDR|DATA_OUT[4]                                         ; padio            ;
+; |MDR|MIR[3]                                              ; |MDR|MIR[3]~corein                                       ; combout          ;
+; |MDR|MIR[2]                                              ; |MDR|MIR[2]~corein                                       ; combout          ;
+; |MDR|MIR[1]                                              ; |MDR|MIR[1]~corein                                       ; combout          ;
+; |MDR|MIR[0]                                              ; |MDR|MIR[0]~corein                                       ; combout          ;
+; |MDR|MIR[5]                                              ; |MDR|MIR[5]~corein                                       ; combout          ;
+; |MDR|CLOCK                                               ; |MDR|CLOCK~corein                                        ; combout          ;
+; |MDR|MIR[8]                                              ; |MDR|MIR[8]~corein                                       ; combout          ;
+; |MDR|inst6~clkctrl                                       ; |MDR|inst6~clkctrl                                       ; outclk           ;
+; |MDR|inst3~feeder                                        ; |MDR|inst3~feeder                                        ; combout          ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                 ;
-+---------------------------------------------------+---------------------------------------------------+------------------+
-; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
-+---------------------------------------------------+---------------------------------------------------+------------------+
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~1      ; |REGISTER_32bits|REGISTER_8bit:inst7|inst9~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~1      ; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~1      ; |REGISTER_32bits|REGISTER_8bit:inst7|inst3~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~1 ; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~1 ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~1      ; |REGISTER_32bits|REGISTER_8bit:inst6|inst9~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~1      ; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~1      ; |REGISTER_32bits|REGISTER_8bit:inst6|inst3~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~1 ; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~1 ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~1      ; |REGISTER_32bits|REGISTER_8bit:inst4|inst9~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~1      ; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~1      ; |REGISTER_32bits|REGISTER_8bit:inst4|inst3~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~1 ; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~1 ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~1      ; |REGISTER_32bits|REGISTER_8bit:inst3|inst9~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~1      ; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~1      ; |REGISTER_32bits|REGISTER_8bit:inst3|inst3~1      ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~1 ; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~1 ; combout          ;
-; |REGISTER_32bits|IN_LOAD[31]                      ; |REGISTER_32bits|IN_LOAD[31]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[30]                      ; |REGISTER_32bits|IN_LOAD[30]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[29]                      ; |REGISTER_32bits|IN_LOAD[29]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[28]                      ; |REGISTER_32bits|IN_LOAD[28]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[27]                      ; |REGISTER_32bits|IN_LOAD[27]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[26]                      ; |REGISTER_32bits|IN_LOAD[26]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[25]                      ; |REGISTER_32bits|IN_LOAD[25]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[24]                      ; |REGISTER_32bits|IN_LOAD[24]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[23]                      ; |REGISTER_32bits|IN_LOAD[23]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[22]                      ; |REGISTER_32bits|IN_LOAD[22]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[21]                      ; |REGISTER_32bits|IN_LOAD[21]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[20]                      ; |REGISTER_32bits|IN_LOAD[20]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[19]                      ; |REGISTER_32bits|IN_LOAD[19]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[18]                      ; |REGISTER_32bits|IN_LOAD[18]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[17]                      ; |REGISTER_32bits|IN_LOAD[17]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[16]                      ; |REGISTER_32bits|IN_LOAD[16]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[15]                      ; |REGISTER_32bits|IN_LOAD[15]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[14]                      ; |REGISTER_32bits|IN_LOAD[14]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[13]                      ; |REGISTER_32bits|IN_LOAD[13]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[12]                      ; |REGISTER_32bits|IN_LOAD[12]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[11]                      ; |REGISTER_32bits|IN_LOAD[11]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[10]                      ; |REGISTER_32bits|IN_LOAD[10]~corein               ; combout          ;
-; |REGISTER_32bits|IN_LOAD[9]                       ; |REGISTER_32bits|IN_LOAD[9]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[8]                       ; |REGISTER_32bits|IN_LOAD[8]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[7]                       ; |REGISTER_32bits|IN_LOAD[7]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[6]                       ; |REGISTER_32bits|IN_LOAD[6]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[5]                       ; |REGISTER_32bits|IN_LOAD[5]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[4]                       ; |REGISTER_32bits|IN_LOAD[4]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[3]                       ; |REGISTER_32bits|IN_LOAD[3]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[2]                       ; |REGISTER_32bits|IN_LOAD[2]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[1]                       ; |REGISTER_32bits|IN_LOAD[1]~corein                ; combout          ;
-; |REGISTER_32bits|IN_LOAD[0]                       ; |REGISTER_32bits|IN_LOAD[0]~corein                ; combout          ;
-; |REGISTER_32bits|B[31]                            ; |REGISTER_32bits|B[31]~corein                     ; combout          ;
-; |REGISTER_32bits|A[31]                            ; |REGISTER_32bits|A[31]~corein                     ; combout          ;
-; |REGISTER_32bits|B[30]                            ; |REGISTER_32bits|B[30]~corein                     ; combout          ;
-; |REGISTER_32bits|A[30]                            ; |REGISTER_32bits|A[30]~corein                     ; combout          ;
-; |REGISTER_32bits|B[29]                            ; |REGISTER_32bits|B[29]~corein                     ; combout          ;
-; |REGISTER_32bits|A[29]                            ; |REGISTER_32bits|A[29]~corein                     ; combout          ;
-; |REGISTER_32bits|B[28]                            ; |REGISTER_32bits|B[28]~corein                     ; combout          ;
-; |REGISTER_32bits|A[28]                            ; |REGISTER_32bits|A[28]~corein                     ; combout          ;
-; |REGISTER_32bits|B[27]                            ; |REGISTER_32bits|B[27]~corein                     ; combout          ;
-; |REGISTER_32bits|A[27]                            ; |REGISTER_32bits|A[27]~corein                     ; combout          ;
-; |REGISTER_32bits|B[26]                            ; |REGISTER_32bits|B[26]~corein                     ; combout          ;
-; |REGISTER_32bits|A[26]                            ; |REGISTER_32bits|A[26]~corein                     ; combout          ;
-; |REGISTER_32bits|B[25]                            ; |REGISTER_32bits|B[25]~corein                     ; combout          ;
-; |REGISTER_32bits|A[25]                            ; |REGISTER_32bits|A[25]~corein                     ; combout          ;
-; |REGISTER_32bits|B[24]                            ; |REGISTER_32bits|B[24]~corein                     ; combout          ;
-; |REGISTER_32bits|A[24]                            ; |REGISTER_32bits|A[24]~corein                     ; combout          ;
-; |REGISTER_32bits|B[23]                            ; |REGISTER_32bits|B[23]~corein                     ; combout          ;
-; |REGISTER_32bits|A[23]                            ; |REGISTER_32bits|A[23]~corein                     ; combout          ;
-; |REGISTER_32bits|B[22]                            ; |REGISTER_32bits|B[22]~corein                     ; combout          ;
-; |REGISTER_32bits|A[22]                            ; |REGISTER_32bits|A[22]~corein                     ; combout          ;
-; |REGISTER_32bits|B[21]                            ; |REGISTER_32bits|B[21]~corein                     ; combout          ;
-; |REGISTER_32bits|A[21]                            ; |REGISTER_32bits|A[21]~corein                     ; combout          ;
-; |REGISTER_32bits|B[20]                            ; |REGISTER_32bits|B[20]~corein                     ; combout          ;
-; |REGISTER_32bits|A[20]                            ; |REGISTER_32bits|A[20]~corein                     ; combout          ;
-; |REGISTER_32bits|B[19]                            ; |REGISTER_32bits|B[19]~corein                     ; combout          ;
-; |REGISTER_32bits|A[19]                            ; |REGISTER_32bits|A[19]~corein                     ; combout          ;
-; |REGISTER_32bits|B[18]                            ; |REGISTER_32bits|B[18]~corein                     ; combout          ;
-; |REGISTER_32bits|A[18]                            ; |REGISTER_32bits|A[18]~corein                     ; combout          ;
-; |REGISTER_32bits|B[17]                            ; |REGISTER_32bits|B[17]~corein                     ; combout          ;
-; |REGISTER_32bits|A[17]                            ; |REGISTER_32bits|A[17]~corein                     ; combout          ;
-; |REGISTER_32bits|B[16]                            ; |REGISTER_32bits|B[16]~corein                     ; combout          ;
-; |REGISTER_32bits|A[16]                            ; |REGISTER_32bits|A[16]~corein                     ; combout          ;
-; |REGISTER_32bits|B[15]                            ; |REGISTER_32bits|B[15]~corein                     ; combout          ;
-; |REGISTER_32bits|A[15]                            ; |REGISTER_32bits|A[15]~corein                     ; combout          ;
-; |REGISTER_32bits|B[14]                            ; |REGISTER_32bits|B[14]~corein                     ; combout          ;
-; |REGISTER_32bits|A[14]                            ; |REGISTER_32bits|A[14]~corein                     ; combout          ;
-; |REGISTER_32bits|B[13]                            ; |REGISTER_32bits|B[13]~corein                     ; combout          ;
-; |REGISTER_32bits|A[13]                            ; |REGISTER_32bits|A[13]~corein                     ; combout          ;
-; |REGISTER_32bits|B[12]                            ; |REGISTER_32bits|B[12]~corein                     ; combout          ;
-; |REGISTER_32bits|A[12]                            ; |REGISTER_32bits|A[12]~corein                     ; combout          ;
-; |REGISTER_32bits|B[11]                            ; |REGISTER_32bits|B[11]~corein                     ; combout          ;
-; |REGISTER_32bits|A[11]                            ; |REGISTER_32bits|A[11]~corein                     ; combout          ;
-; |REGISTER_32bits|B[10]                            ; |REGISTER_32bits|B[10]~corein                     ; combout          ;
-; |REGISTER_32bits|A[10]                            ; |REGISTER_32bits|A[10]~corein                     ; combout          ;
-; |REGISTER_32bits|B[9]                             ; |REGISTER_32bits|B[9]~corein                      ; combout          ;
-; |REGISTER_32bits|A[9]                             ; |REGISTER_32bits|A[9]~corein                      ; combout          ;
-; |REGISTER_32bits|B[8]                             ; |REGISTER_32bits|B[8]~corein                      ; combout          ;
-; |REGISTER_32bits|A[8]                             ; |REGISTER_32bits|A[8]~corein                      ; combout          ;
-; |REGISTER_32bits|B[7]                             ; |REGISTER_32bits|B[7]~corein                      ; combout          ;
-; |REGISTER_32bits|A[7]                             ; |REGISTER_32bits|A[7]~corein                      ; combout          ;
-; |REGISTER_32bits|B[6]                             ; |REGISTER_32bits|B[6]~corein                      ; combout          ;
-; |REGISTER_32bits|A[6]                             ; |REGISTER_32bits|A[6]~corein                      ; combout          ;
-; |REGISTER_32bits|B[5]                             ; |REGISTER_32bits|B[5]~corein                      ; combout          ;
-; |REGISTER_32bits|A[5]                             ; |REGISTER_32bits|A[5]~corein                      ; combout          ;
-; |REGISTER_32bits|B[4]                             ; |REGISTER_32bits|B[4]~corein                      ; combout          ;
-; |REGISTER_32bits|A[4]                             ; |REGISTER_32bits|A[4]~corein                      ; combout          ;
-; |REGISTER_32bits|B[3]                             ; |REGISTER_32bits|B[3]~corein                      ; combout          ;
-; |REGISTER_32bits|A[3]                             ; |REGISTER_32bits|A[3]~corein                      ; combout          ;
-; |REGISTER_32bits|B[2]                             ; |REGISTER_32bits|B[2]~corein                      ; combout          ;
-; |REGISTER_32bits|A[2]                             ; |REGISTER_32bits|A[2]~corein                      ; combout          ;
-; |REGISTER_32bits|B[1]                             ; |REGISTER_32bits|B[1]~corein                      ; combout          ;
-; |REGISTER_32bits|A[1]                             ; |REGISTER_32bits|A[1]~corein                      ; combout          ;
-; |REGISTER_32bits|B[0]                             ; |REGISTER_32bits|B[0]~corein                      ; combout          ;
-; |REGISTER_32bits|A[0]                             ; |REGISTER_32bits|A[0]~corein                      ; combout          ;
-+---------------------------------------------------+---------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                               ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst9      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst9      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|inst5[30]~1                    ; |MDR|REGISTER_32bits:inst|inst5[30]~1                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[22]~9                    ; |MDR|REGISTER_32bits:inst|inst5[22]~9                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[10]~21                   ; |MDR|REGISTER_32bits:inst|inst5[10]~21                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[9]~22                    ; |MDR|REGISTER_32bits:inst|inst5[9]~22                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[6]~25                    ; |MDR|REGISTER_32bits:inst|inst5[6]~25                    ; combout          ;
+; |MDR|OUT_B[30]                                           ; |MDR|OUT_B[30]                                           ; padio            ;
+; |MDR|OUT_B[22]                                           ; |MDR|OUT_B[22]                                           ; padio            ;
+; |MDR|OUT_B[10]                                           ; |MDR|OUT_B[10]                                           ; padio            ;
+; |MDR|OUT_B[9]                                            ; |MDR|OUT_B[9]                                            ; padio            ;
+; |MDR|OUT_B[6]                                            ; |MDR|OUT_B[6]                                            ; padio            ;
+; |MDR|DATA_OUT[31]                                        ; |MDR|DATA_OUT[31]                                        ; padio            ;
+; |MDR|DATA_OUT[30]                                        ; |MDR|DATA_OUT[30]                                        ; padio            ;
+; |MDR|DATA_OUT[29]                                        ; |MDR|DATA_OUT[29]                                        ; padio            ;
+; |MDR|DATA_OUT[26]                                        ; |MDR|DATA_OUT[26]                                        ; padio            ;
+; |MDR|DATA_OUT[24]                                        ; |MDR|DATA_OUT[24]                                        ; padio            ;
+; |MDR|DATA_OUT[23]                                        ; |MDR|DATA_OUT[23]                                        ; padio            ;
+; |MDR|DATA_OUT[22]                                        ; |MDR|DATA_OUT[22]                                        ; padio            ;
+; |MDR|DATA_OUT[21]                                        ; |MDR|DATA_OUT[21]                                        ; padio            ;
+; |MDR|DATA_OUT[18]                                        ; |MDR|DATA_OUT[18]                                        ; padio            ;
+; |MDR|DATA_OUT[16]                                        ; |MDR|DATA_OUT[16]                                        ; padio            ;
+; |MDR|DATA_OUT[15]                                        ; |MDR|DATA_OUT[15]                                        ; padio            ;
+; |MDR|DATA_OUT[14]                                        ; |MDR|DATA_OUT[14]                                        ; padio            ;
+; |MDR|DATA_OUT[13]                                        ; |MDR|DATA_OUT[13]                                        ; padio            ;
+; |MDR|DATA_OUT[12]                                        ; |MDR|DATA_OUT[12]                                        ; padio            ;
+; |MDR|DATA_OUT[10]                                        ; |MDR|DATA_OUT[10]                                        ; padio            ;
+; |MDR|DATA_OUT[9]                                         ; |MDR|DATA_OUT[9]                                         ; padio            ;
+; |MDR|DATA_OUT[6]                                         ; |MDR|DATA_OUT[6]                                         ; padio            ;
+; |MDR|DATA_OUT[3]                                         ; |MDR|DATA_OUT[3]                                         ; padio            ;
+; |MDR|DATA_OUT[2]                                         ; |MDR|DATA_OUT[2]                                         ; padio            ;
+; |MDR|DATA_OUT[1]                                         ; |MDR|DATA_OUT[1]                                         ; padio            ;
+; |MDR|DATA_OUT[0]                                         ; |MDR|DATA_OUT[0]                                         ; padio            ;
+; |MDR|DATA_IN[31]                                         ; |MDR|DATA_IN[31]~corein                                  ; combout          ;
+; |MDR|IN_C[31]                                            ; |MDR|IN_C[31]~corein                                     ; combout          ;
+; |MDR|LOAD                                                ; |MDR|LOAD~corein                                         ; combout          ;
+; |MDR|DATA_IN[30]                                         ; |MDR|DATA_IN[30]~corein                                  ; combout          ;
+; |MDR|IN_C[30]                                            ; |MDR|IN_C[30]~corein                                     ; combout          ;
+; |MDR|DATA_IN[29]                                         ; |MDR|DATA_IN[29]~corein                                  ; combout          ;
+; |MDR|IN_C[29]                                            ; |MDR|IN_C[29]~corein                                     ; combout          ;
+; |MDR|DATA_IN[28]                                         ; |MDR|DATA_IN[28]~corein                                  ; combout          ;
+; |MDR|IN_C[28]                                            ; |MDR|IN_C[28]~corein                                     ; combout          ;
+; |MDR|DATA_IN[27]                                         ; |MDR|DATA_IN[27]~corein                                  ; combout          ;
+; |MDR|IN_C[27]                                            ; |MDR|IN_C[27]~corein                                     ; combout          ;
+; |MDR|DATA_IN[26]                                         ; |MDR|DATA_IN[26]~corein                                  ; combout          ;
+; |MDR|IN_C[26]                                            ; |MDR|IN_C[26]~corein                                     ; combout          ;
+; |MDR|DATA_IN[25]                                         ; |MDR|DATA_IN[25]~corein                                  ; combout          ;
+; |MDR|IN_C[25]                                            ; |MDR|IN_C[25]~corein                                     ; combout          ;
+; |MDR|DATA_IN[24]                                         ; |MDR|DATA_IN[24]~corein                                  ; combout          ;
+; |MDR|IN_C[24]                                            ; |MDR|IN_C[24]~corein                                     ; combout          ;
+; |MDR|DATA_IN[23]                                         ; |MDR|DATA_IN[23]~corein                                  ; combout          ;
+; |MDR|IN_C[23]                                            ; |MDR|IN_C[23]~corein                                     ; combout          ;
+; |MDR|DATA_IN[22]                                         ; |MDR|DATA_IN[22]~corein                                  ; combout          ;
+; |MDR|IN_C[22]                                            ; |MDR|IN_C[22]~corein                                     ; combout          ;
+; |MDR|DATA_IN[21]                                         ; |MDR|DATA_IN[21]~corein                                  ; combout          ;
+; |MDR|IN_C[21]                                            ; |MDR|IN_C[21]~corein                                     ; combout          ;
+; |MDR|DATA_IN[20]                                         ; |MDR|DATA_IN[20]~corein                                  ; combout          ;
+; |MDR|IN_C[20]                                            ; |MDR|IN_C[20]~corein                                     ; combout          ;
+; |MDR|DATA_IN[19]                                         ; |MDR|DATA_IN[19]~corein                                  ; combout          ;
+; |MDR|IN_C[19]                                            ; |MDR|IN_C[19]~corein                                     ; combout          ;
+; |MDR|DATA_IN[18]                                         ; |MDR|DATA_IN[18]~corein                                  ; combout          ;
+; |MDR|IN_C[18]                                            ; |MDR|IN_C[18]~corein                                     ; combout          ;
+; |MDR|DATA_IN[17]                                         ; |MDR|DATA_IN[17]~corein                                  ; combout          ;
+; |MDR|IN_C[17]                                            ; |MDR|IN_C[17]~corein                                     ; combout          ;
+; |MDR|DATA_IN[16]                                         ; |MDR|DATA_IN[16]~corein                                  ; combout          ;
+; |MDR|IN_C[16]                                            ; |MDR|IN_C[16]~corein                                     ; combout          ;
+; |MDR|DATA_IN[15]                                         ; |MDR|DATA_IN[15]~corein                                  ; combout          ;
+; |MDR|IN_C[15]                                            ; |MDR|IN_C[15]~corein                                     ; combout          ;
+; |MDR|DATA_IN[14]                                         ; |MDR|DATA_IN[14]~corein                                  ; combout          ;
+; |MDR|IN_C[14]                                            ; |MDR|IN_C[14]~corein                                     ; combout          ;
+; |MDR|DATA_IN[13]                                         ; |MDR|DATA_IN[13]~corein                                  ; combout          ;
+; |MDR|IN_C[13]                                            ; |MDR|IN_C[13]~corein                                     ; combout          ;
+; |MDR|DATA_IN[12]                                         ; |MDR|DATA_IN[12]~corein                                  ; combout          ;
+; |MDR|IN_C[12]                                            ; |MDR|IN_C[12]~corein                                     ; combout          ;
+; |MDR|DATA_IN[11]                                         ; |MDR|DATA_IN[11]~corein                                  ; combout          ;
+; |MDR|IN_C[11]                                            ; |MDR|IN_C[11]~corein                                     ; combout          ;
+; |MDR|DATA_IN[10]                                         ; |MDR|DATA_IN[10]~corein                                  ; combout          ;
+; |MDR|IN_C[10]                                            ; |MDR|IN_C[10]~corein                                     ; combout          ;
+; |MDR|DATA_IN[9]                                          ; |MDR|DATA_IN[9]~corein                                   ; combout          ;
+; |MDR|IN_C[9]                                             ; |MDR|IN_C[9]~corein                                      ; combout          ;
+; |MDR|DATA_IN[8]                                          ; |MDR|DATA_IN[8]~corein                                   ; combout          ;
+; |MDR|IN_C[8]                                             ; |MDR|IN_C[8]~corein                                      ; combout          ;
+; |MDR|DATA_IN[7]                                          ; |MDR|DATA_IN[7]~corein                                   ; combout          ;
+; |MDR|IN_C[7]                                             ; |MDR|IN_C[7]~corein                                      ; combout          ;
+; |MDR|DATA_IN[6]                                          ; |MDR|DATA_IN[6]~corein                                   ; combout          ;
+; |MDR|IN_C[6]                                             ; |MDR|IN_C[6]~corein                                      ; combout          ;
+; |MDR|DATA_IN[5]                                          ; |MDR|DATA_IN[5]~corein                                   ; combout          ;
+; |MDR|IN_C[5]                                             ; |MDR|IN_C[5]~corein                                      ; combout          ;
+; |MDR|DATA_IN[4]                                          ; |MDR|DATA_IN[4]~corein                                   ; combout          ;
+; |MDR|IN_C[4]                                             ; |MDR|IN_C[4]~corein                                      ; combout          ;
+; |MDR|DATA_IN[3]                                          ; |MDR|DATA_IN[3]~corein                                   ; combout          ;
+; |MDR|IN_C[3]                                             ; |MDR|IN_C[3]~corein                                      ; combout          ;
+; |MDR|DATA_IN[2]                                          ; |MDR|DATA_IN[2]~corein                                   ; combout          ;
+; |MDR|IN_C[2]                                             ; |MDR|IN_C[2]~corein                                      ; combout          ;
+; |MDR|DATA_IN[1]                                          ; |MDR|DATA_IN[1]~corein                                   ; combout          ;
+; |MDR|IN_C[1]                                             ; |MDR|IN_C[1]~corein                                      ; combout          ;
+; |MDR|DATA_IN[0]                                          ; |MDR|DATA_IN[0]~corein                                   ; combout          ;
+; |MDR|IN_C[0]                                             ; |MDR|IN_C[0]~corein                                      ; combout          ;
+; |MDR|LOAD~clkctrl                                        ; |MDR|LOAD~clkctrl                                        ; outclk           ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                 ;
-+-----------------------------------------------------------+-----------------------------------------------------------+------------------+
-; Node Name                                                 ; Output Port Name                                          ; Output Port Type ;
-+-----------------------------------------------------------+-----------------------------------------------------------+------------------+
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~_emulated      ; |REGISTER_32bits|REGISTER_8bit:inst7|inst6~_emulated      ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst7|inst300099~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~_emulated      ; |REGISTER_32bits|REGISTER_8bit:inst6|inst6~_emulated      ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst6|inst300099~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~_emulated      ; |REGISTER_32bits|REGISTER_8bit:inst4|inst6~_emulated      ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst4|inst300099~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~_emulated     ; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~_emulated     ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~_emulated      ; |REGISTER_32bits|REGISTER_8bit:inst3|inst6~_emulated      ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~_emulated ; |REGISTER_32bits|REGISTER_8bit:inst3|inst300099~_emulated ; regout           ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~1             ; |REGISTER_32bits|REGISTER_8bit:inst7|inst23~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~1             ; |REGISTER_32bits|REGISTER_8bit:inst7|inst20~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~1             ; |REGISTER_32bits|REGISTER_8bit:inst7|inst16~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~1             ; |REGISTER_32bits|REGISTER_8bit:inst7|inst13~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~1             ; |REGISTER_32bits|REGISTER_8bit:inst6|inst23~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~1             ; |REGISTER_32bits|REGISTER_8bit:inst6|inst20~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~1             ; |REGISTER_32bits|REGISTER_8bit:inst6|inst16~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~1             ; |REGISTER_32bits|REGISTER_8bit:inst6|inst13~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~1             ; |REGISTER_32bits|REGISTER_8bit:inst4|inst23~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~1             ; |REGISTER_32bits|REGISTER_8bit:inst4|inst20~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~1             ; |REGISTER_32bits|REGISTER_8bit:inst4|inst16~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~1             ; |REGISTER_32bits|REGISTER_8bit:inst4|inst13~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~1             ; |REGISTER_32bits|REGISTER_8bit:inst3|inst23~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~1             ; |REGISTER_32bits|REGISTER_8bit:inst3|inst20~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~1             ; |REGISTER_32bits|REGISTER_8bit:inst3|inst16~1             ; combout          ;
-; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~1             ; |REGISTER_32bits|REGISTER_8bit:inst3|inst13~1             ; combout          ;
-; |REGISTER_32bits|OUTPUTA[26]                              ; |REGISTER_32bits|OUTPUTA[26]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTA[24]                              ; |REGISTER_32bits|OUTPUTA[24]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTA[18]                              ; |REGISTER_32bits|OUTPUTA[18]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTA[16]                              ; |REGISTER_32bits|OUTPUTA[16]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTA[10]                              ; |REGISTER_32bits|OUTPUTA[10]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTA[8]                               ; |REGISTER_32bits|OUTPUTA[8]                               ; padio            ;
-; |REGISTER_32bits|OUTPUTA[2]                               ; |REGISTER_32bits|OUTPUTA[2]                               ; padio            ;
-; |REGISTER_32bits|OUTPUTA[0]                               ; |REGISTER_32bits|OUTPUTA[0]                               ; padio            ;
-; |REGISTER_32bits|OUTPUTB[26]                              ; |REGISTER_32bits|OUTPUTB[26]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTB[24]                              ; |REGISTER_32bits|OUTPUTB[24]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTB[18]                              ; |REGISTER_32bits|OUTPUTB[18]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTB[16]                              ; |REGISTER_32bits|OUTPUTB[16]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTB[10]                              ; |REGISTER_32bits|OUTPUTB[10]                              ; padio            ;
-; |REGISTER_32bits|OUTPUTB[8]                               ; |REGISTER_32bits|OUTPUTB[8]                               ; padio            ;
-; |REGISTER_32bits|OUTPUTB[2]                               ; |REGISTER_32bits|OUTPUTB[2]                               ; padio            ;
-; |REGISTER_32bits|OUTPUTB[0]                               ; |REGISTER_32bits|OUTPUTB[0]                               ; padio            ;
-; |REGISTER_32bits|IN_LOAD[31]                              ; |REGISTER_32bits|IN_LOAD[31]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[30]                              ; |REGISTER_32bits|IN_LOAD[30]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[29]                              ; |REGISTER_32bits|IN_LOAD[29]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[28]                              ; |REGISTER_32bits|IN_LOAD[28]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[27]                              ; |REGISTER_32bits|IN_LOAD[27]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[26]                              ; |REGISTER_32bits|IN_LOAD[26]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[25]                              ; |REGISTER_32bits|IN_LOAD[25]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[24]                              ; |REGISTER_32bits|IN_LOAD[24]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[23]                              ; |REGISTER_32bits|IN_LOAD[23]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[22]                              ; |REGISTER_32bits|IN_LOAD[22]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[21]                              ; |REGISTER_32bits|IN_LOAD[21]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[20]                              ; |REGISTER_32bits|IN_LOAD[20]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[19]                              ; |REGISTER_32bits|IN_LOAD[19]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[18]                              ; |REGISTER_32bits|IN_LOAD[18]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[17]                              ; |REGISTER_32bits|IN_LOAD[17]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[16]                              ; |REGISTER_32bits|IN_LOAD[16]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[15]                              ; |REGISTER_32bits|IN_LOAD[15]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[14]                              ; |REGISTER_32bits|IN_LOAD[14]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[13]                              ; |REGISTER_32bits|IN_LOAD[13]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[12]                              ; |REGISTER_32bits|IN_LOAD[12]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[11]                              ; |REGISTER_32bits|IN_LOAD[11]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[10]                              ; |REGISTER_32bits|IN_LOAD[10]~corein                       ; combout          ;
-; |REGISTER_32bits|IN_LOAD[9]                               ; |REGISTER_32bits|IN_LOAD[9]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[8]                               ; |REGISTER_32bits|IN_LOAD[8]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[7]                               ; |REGISTER_32bits|IN_LOAD[7]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[6]                               ; |REGISTER_32bits|IN_LOAD[6]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[5]                               ; |REGISTER_32bits|IN_LOAD[5]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[4]                               ; |REGISTER_32bits|IN_LOAD[4]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[3]                               ; |REGISTER_32bits|IN_LOAD[3]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[2]                               ; |REGISTER_32bits|IN_LOAD[2]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[1]                               ; |REGISTER_32bits|IN_LOAD[1]~corein                        ; combout          ;
-; |REGISTER_32bits|IN_LOAD[0]                               ; |REGISTER_32bits|IN_LOAD[0]~corein                        ; combout          ;
-; |REGISTER_32bits|B[31]                                    ; |REGISTER_32bits|B[31]~corein                             ; combout          ;
-; |REGISTER_32bits|A[31]                                    ; |REGISTER_32bits|A[31]~corein                             ; combout          ;
-; |REGISTER_32bits|B[30]                                    ; |REGISTER_32bits|B[30]~corein                             ; combout          ;
-; |REGISTER_32bits|A[30]                                    ; |REGISTER_32bits|A[30]~corein                             ; combout          ;
-; |REGISTER_32bits|B[29]                                    ; |REGISTER_32bits|B[29]~corein                             ; combout          ;
-; |REGISTER_32bits|A[29]                                    ; |REGISTER_32bits|A[29]~corein                             ; combout          ;
-; |REGISTER_32bits|B[28]                                    ; |REGISTER_32bits|B[28]~corein                             ; combout          ;
-; |REGISTER_32bits|A[28]                                    ; |REGISTER_32bits|A[28]~corein                             ; combout          ;
-; |REGISTER_32bits|B[27]                                    ; |REGISTER_32bits|B[27]~corein                             ; combout          ;
-; |REGISTER_32bits|A[27]                                    ; |REGISTER_32bits|A[27]~corein                             ; combout          ;
-; |REGISTER_32bits|B[26]                                    ; |REGISTER_32bits|B[26]~corein                             ; combout          ;
-; |REGISTER_32bits|A[26]                                    ; |REGISTER_32bits|A[26]~corein                             ; combout          ;
-; |REGISTER_32bits|B[25]                                    ; |REGISTER_32bits|B[25]~corein                             ; combout          ;
-; |REGISTER_32bits|A[25]                                    ; |REGISTER_32bits|A[25]~corein                             ; combout          ;
-; |REGISTER_32bits|B[24]                                    ; |REGISTER_32bits|B[24]~corein                             ; combout          ;
-; |REGISTER_32bits|A[24]                                    ; |REGISTER_32bits|A[24]~corein                             ; combout          ;
-; |REGISTER_32bits|B[23]                                    ; |REGISTER_32bits|B[23]~corein                             ; combout          ;
-; |REGISTER_32bits|A[23]                                    ; |REGISTER_32bits|A[23]~corein                             ; combout          ;
-; |REGISTER_32bits|B[22]                                    ; |REGISTER_32bits|B[22]~corein                             ; combout          ;
-; |REGISTER_32bits|A[22]                                    ; |REGISTER_32bits|A[22]~corein                             ; combout          ;
-; |REGISTER_32bits|B[21]                                    ; |REGISTER_32bits|B[21]~corein                             ; combout          ;
-; |REGISTER_32bits|A[21]                                    ; |REGISTER_32bits|A[21]~corein                             ; combout          ;
-; |REGISTER_32bits|B[20]                                    ; |REGISTER_32bits|B[20]~corein                             ; combout          ;
-; |REGISTER_32bits|A[20]                                    ; |REGISTER_32bits|A[20]~corein                             ; combout          ;
-; |REGISTER_32bits|B[19]                                    ; |REGISTER_32bits|B[19]~corein                             ; combout          ;
-; |REGISTER_32bits|A[19]                                    ; |REGISTER_32bits|A[19]~corein                             ; combout          ;
-; |REGISTER_32bits|B[18]                                    ; |REGISTER_32bits|B[18]~corein                             ; combout          ;
-; |REGISTER_32bits|A[18]                                    ; |REGISTER_32bits|A[18]~corein                             ; combout          ;
-; |REGISTER_32bits|B[17]                                    ; |REGISTER_32bits|B[17]~corein                             ; combout          ;
-; |REGISTER_32bits|A[17]                                    ; |REGISTER_32bits|A[17]~corein                             ; combout          ;
-; |REGISTER_32bits|B[16]                                    ; |REGISTER_32bits|B[16]~corein                             ; combout          ;
-; |REGISTER_32bits|A[16]                                    ; |REGISTER_32bits|A[16]~corein                             ; combout          ;
-; |REGISTER_32bits|B[15]                                    ; |REGISTER_32bits|B[15]~corein                             ; combout          ;
-; |REGISTER_32bits|A[15]                                    ; |REGISTER_32bits|A[15]~corein                             ; combout          ;
-; |REGISTER_32bits|B[14]                                    ; |REGISTER_32bits|B[14]~corein                             ; combout          ;
-; |REGISTER_32bits|A[14]                                    ; |REGISTER_32bits|A[14]~corein                             ; combout          ;
-; |REGISTER_32bits|B[13]                                    ; |REGISTER_32bits|B[13]~corein                             ; combout          ;
-; |REGISTER_32bits|A[13]                                    ; |REGISTER_32bits|A[13]~corein                             ; combout          ;
-; |REGISTER_32bits|B[12]                                    ; |REGISTER_32bits|B[12]~corein                             ; combout          ;
-; |REGISTER_32bits|A[12]                                    ; |REGISTER_32bits|A[12]~corein                             ; combout          ;
-; |REGISTER_32bits|B[11]                                    ; |REGISTER_32bits|B[11]~corein                             ; combout          ;
-; |REGISTER_32bits|A[11]                                    ; |REGISTER_32bits|A[11]~corein                             ; combout          ;
-; |REGISTER_32bits|B[10]                                    ; |REGISTER_32bits|B[10]~corein                             ; combout          ;
-; |REGISTER_32bits|A[10]                                    ; |REGISTER_32bits|A[10]~corein                             ; combout          ;
-; |REGISTER_32bits|B[9]                                     ; |REGISTER_32bits|B[9]~corein                              ; combout          ;
-; |REGISTER_32bits|A[9]                                     ; |REGISTER_32bits|A[9]~corein                              ; combout          ;
-; |REGISTER_32bits|B[8]                                     ; |REGISTER_32bits|B[8]~corein                              ; combout          ;
-; |REGISTER_32bits|A[8]                                     ; |REGISTER_32bits|A[8]~corein                              ; combout          ;
-; |REGISTER_32bits|B[7]                                     ; |REGISTER_32bits|B[7]~corein                              ; combout          ;
-; |REGISTER_32bits|A[7]                                     ; |REGISTER_32bits|A[7]~corein                              ; combout          ;
-; |REGISTER_32bits|B[6]                                     ; |REGISTER_32bits|B[6]~corein                              ; combout          ;
-; |REGISTER_32bits|A[6]                                     ; |REGISTER_32bits|A[6]~corein                              ; combout          ;
-; |REGISTER_32bits|B[5]                                     ; |REGISTER_32bits|B[5]~corein                              ; combout          ;
-; |REGISTER_32bits|A[5]                                     ; |REGISTER_32bits|A[5]~corein                              ; combout          ;
-; |REGISTER_32bits|B[4]                                     ; |REGISTER_32bits|B[4]~corein                              ; combout          ;
-; |REGISTER_32bits|A[4]                                     ; |REGISTER_32bits|A[4]~corein                              ; combout          ;
-; |REGISTER_32bits|B[3]                                     ; |REGISTER_32bits|B[3]~corein                              ; combout          ;
-; |REGISTER_32bits|A[3]                                     ; |REGISTER_32bits|A[3]~corein                              ; combout          ;
-; |REGISTER_32bits|B[2]                                     ; |REGISTER_32bits|B[2]~corein                              ; combout          ;
-; |REGISTER_32bits|A[2]                                     ; |REGISTER_32bits|A[2]~corein                              ; combout          ;
-; |REGISTER_32bits|B[1]                                     ; |REGISTER_32bits|B[1]~corein                              ; combout          ;
-; |REGISTER_32bits|A[1]                                     ; |REGISTER_32bits|A[1]~corein                              ; combout          ;
-; |REGISTER_32bits|B[0]                                     ; |REGISTER_32bits|B[0]~corein                              ; combout          ;
-; |REGISTER_32bits|A[0]                                     ; |REGISTER_32bits|A[0]~corein                              ; combout          ;
-+-----------------------------------------------------------+-----------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                               ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst6      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst6      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst3      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst3      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst20     ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst20     ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst9      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst9      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst6      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst6      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst3      ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst3      ; regout           ;
+; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst300099 ; |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst300099 ; regout           ;
+; |MDR|REGISTER_32bits:inst|inst5[31]~0                    ; |MDR|REGISTER_32bits:inst|inst5[31]~0                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[30]~1                    ; |MDR|REGISTER_32bits:inst|inst5[30]~1                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[24]~7                    ; |MDR|REGISTER_32bits:inst|inst5[24]~7                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[23]~8                    ; |MDR|REGISTER_32bits:inst|inst5[23]~8                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[22]~9                    ; |MDR|REGISTER_32bits:inst|inst5[22]~9                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[16]~15                   ; |MDR|REGISTER_32bits:inst|inst5[16]~15                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[15]~16                   ; |MDR|REGISTER_32bits:inst|inst5[15]~16                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[13]~18                   ; |MDR|REGISTER_32bits:inst|inst5[13]~18                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[12]~19                   ; |MDR|REGISTER_32bits:inst|inst5[12]~19                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[10]~21                   ; |MDR|REGISTER_32bits:inst|inst5[10]~21                   ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[9]~22                    ; |MDR|REGISTER_32bits:inst|inst5[9]~22                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[6]~25                    ; |MDR|REGISTER_32bits:inst|inst5[6]~25                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[3]~28                    ; |MDR|REGISTER_32bits:inst|inst5[3]~28                    ; combout          ;
+; |MDR|REGISTER_32bits:inst|inst5[0]~31                    ; |MDR|REGISTER_32bits:inst|inst5[0]~31                    ; combout          ;
+; |MDR|OUT_B[31]                                           ; |MDR|OUT_B[31]                                           ; padio            ;
+; |MDR|OUT_B[24]                                           ; |MDR|OUT_B[24]                                           ; padio            ;
+; |MDR|OUT_B[23]                                           ; |MDR|OUT_B[23]                                           ; padio            ;
+; |MDR|OUT_B[16]                                           ; |MDR|OUT_B[16]                                           ; padio            ;
+; |MDR|OUT_B[15]                                           ; |MDR|OUT_B[15]                                           ; padio            ;
+; |MDR|OUT_B[13]                                           ; |MDR|OUT_B[13]                                           ; padio            ;
+; |MDR|OUT_B[12]                                           ; |MDR|OUT_B[12]                                           ; padio            ;
+; |MDR|OUT_B[3]                                            ; |MDR|OUT_B[3]                                            ; padio            ;
+; |MDR|OUT_B[0]                                            ; |MDR|OUT_B[0]                                            ; padio            ;
+; |MDR|DATA_OUT[31]                                        ; |MDR|DATA_OUT[31]                                        ; padio            ;
+; |MDR|DATA_OUT[24]                                        ; |MDR|DATA_OUT[24]                                        ; padio            ;
+; |MDR|DATA_OUT[23]                                        ; |MDR|DATA_OUT[23]                                        ; padio            ;
+; |MDR|DATA_OUT[16]                                        ; |MDR|DATA_OUT[16]                                        ; padio            ;
+; |MDR|DATA_OUT[15]                                        ; |MDR|DATA_OUT[15]                                        ; padio            ;
+; |MDR|DATA_OUT[13]                                        ; |MDR|DATA_OUT[13]                                        ; padio            ;
+; |MDR|DATA_OUT[12]                                        ; |MDR|DATA_OUT[12]                                        ; padio            ;
+; |MDR|DATA_OUT[3]                                         ; |MDR|DATA_OUT[3]                                         ; padio            ;
+; |MDR|DATA_OUT[0]                                         ; |MDR|DATA_OUT[0]                                         ; padio            ;
+; |MDR|DATA_IN[31]                                         ; |MDR|DATA_IN[31]~corein                                  ; combout          ;
+; |MDR|DATA_IN[30]                                         ; |MDR|DATA_IN[30]~corein                                  ; combout          ;
+; |MDR|IN_C[30]                                            ; |MDR|IN_C[30]~corein                                     ; combout          ;
+; |MDR|DATA_IN[29]                                         ; |MDR|DATA_IN[29]~corein                                  ; combout          ;
+; |MDR|IN_C[29]                                            ; |MDR|IN_C[29]~corein                                     ; combout          ;
+; |MDR|DATA_IN[28]                                         ; |MDR|DATA_IN[28]~corein                                  ; combout          ;
+; |MDR|DATA_IN[27]                                         ; |MDR|DATA_IN[27]~corein                                  ; combout          ;
+; |MDR|DATA_IN[26]                                         ; |MDR|DATA_IN[26]~corein                                  ; combout          ;
+; |MDR|IN_C[26]                                            ; |MDR|IN_C[26]~corein                                     ; combout          ;
+; |MDR|DATA_IN[25]                                         ; |MDR|DATA_IN[25]~corein                                  ; combout          ;
+; |MDR|DATA_IN[24]                                         ; |MDR|DATA_IN[24]~corein                                  ; combout          ;
+; |MDR|DATA_IN[23]                                         ; |MDR|DATA_IN[23]~corein                                  ; combout          ;
+; |MDR|DATA_IN[22]                                         ; |MDR|DATA_IN[22]~corein                                  ; combout          ;
+; |MDR|IN_C[22]                                            ; |MDR|IN_C[22]~corein                                     ; combout          ;
+; |MDR|DATA_IN[21]                                         ; |MDR|DATA_IN[21]~corein                                  ; combout          ;
+; |MDR|IN_C[21]                                            ; |MDR|IN_C[21]~corein                                     ; combout          ;
+; |MDR|DATA_IN[20]                                         ; |MDR|DATA_IN[20]~corein                                  ; combout          ;
+; |MDR|DATA_IN[19]                                         ; |MDR|DATA_IN[19]~corein                                  ; combout          ;
+; |MDR|DATA_IN[18]                                         ; |MDR|DATA_IN[18]~corein                                  ; combout          ;
+; |MDR|IN_C[18]                                            ; |MDR|IN_C[18]~corein                                     ; combout          ;
+; |MDR|DATA_IN[17]                                         ; |MDR|DATA_IN[17]~corein                                  ; combout          ;
+; |MDR|DATA_IN[16]                                         ; |MDR|DATA_IN[16]~corein                                  ; combout          ;
+; |MDR|DATA_IN[15]                                         ; |MDR|DATA_IN[15]~corein                                  ; combout          ;
+; |MDR|DATA_IN[14]                                         ; |MDR|DATA_IN[14]~corein                                  ; combout          ;
+; |MDR|IN_C[14]                                            ; |MDR|IN_C[14]~corein                                     ; combout          ;
+; |MDR|DATA_IN[13]                                         ; |MDR|DATA_IN[13]~corein                                  ; combout          ;
+; |MDR|DATA_IN[12]                                         ; |MDR|DATA_IN[12]~corein                                  ; combout          ;
+; |MDR|DATA_IN[11]                                         ; |MDR|DATA_IN[11]~corein                                  ; combout          ;
+; |MDR|DATA_IN[10]                                         ; |MDR|DATA_IN[10]~corein                                  ; combout          ;
+; |MDR|IN_C[10]                                            ; |MDR|IN_C[10]~corein                                     ; combout          ;
+; |MDR|DATA_IN[9]                                          ; |MDR|DATA_IN[9]~corein                                   ; combout          ;
+; |MDR|IN_C[9]                                             ; |MDR|IN_C[9]~corein                                      ; combout          ;
+; |MDR|DATA_IN[8]                                          ; |MDR|DATA_IN[8]~corein                                   ; combout          ;
+; |MDR|DATA_IN[7]                                          ; |MDR|DATA_IN[7]~corein                                   ; combout          ;
+; |MDR|DATA_IN[6]                                          ; |MDR|DATA_IN[6]~corein                                   ; combout          ;
+; |MDR|IN_C[6]                                             ; |MDR|IN_C[6]~corein                                      ; combout          ;
+; |MDR|DATA_IN[5]                                          ; |MDR|DATA_IN[5]~corein                                   ; combout          ;
+; |MDR|DATA_IN[4]                                          ; |MDR|DATA_IN[4]~corein                                   ; combout          ;
+; |MDR|DATA_IN[3]                                          ; |MDR|DATA_IN[3]~corein                                   ; combout          ;
+; |MDR|DATA_IN[2]                                          ; |MDR|DATA_IN[2]~corein                                   ; combout          ;
+; |MDR|IN_C[2]                                             ; |MDR|IN_C[2]~corein                                      ; combout          ;
+; |MDR|DATA_IN[1]                                          ; |MDR|DATA_IN[1]~corein                                   ; combout          ;
+; |MDR|IN_C[1]                                             ; |MDR|IN_C[1]~corein                                      ; combout          ;
+; |MDR|DATA_IN[0]                                          ; |MDR|DATA_IN[0]~corein                                   ; combout          ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -536,19 +418,53 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 28 10:37:45 2026
+    Info: Processing started: Fri Sep 11 09:54:54 2026
 Info: Command: quartus_sim --simulation_results_format=VWF MIC1 -c MIC1
-Info (324025): Using vector source file "C:/Users/Aluno/RafaelAlves/REGISTER_32bits.vwf"
+Info (324025): Using vector source file "C:/Users/Aluno/RafaelAlves/MDR.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "write_enable" in design.
+Info (328054): Inverted registers were found during simulation
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst9
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst6
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst3
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst300099
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst23
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst20
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst16
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst13
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst9
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst6
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst3
+    Info (328055): Register: |MDR|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst300099
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      45.76 %
-Info (328052): Number of transitions in simulation is 563
+Info (328053): Simulation coverage is      33.98 %
+Info (328052): Number of transitions in simulation is 300
 Info (324045): Vector file MIC1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 286 megabytes
-    Info: Processing ended: Fri Aug 28 10:37:45 2026
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Fri Sep 11 09:54:55 2026
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
