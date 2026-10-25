@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC1
-Fri Oct 16 10:52:44 2026
+Fri Oct 23 10:32:04 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,13 +15,12 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated
- 13. Parameter Settings for User Entity Instance: CONTROLSTORE:inst|altsyncram:altsyncram_component
- 14. altsyncram Parameter Settings by Entity Instance
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated
+ 12. Parameter Settings for User Entity Instance: CONTROLSTORE:inst|altsyncram:altsyncram_component
+ 13. altsyncram Parameter Settings by Entity Instance
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -47,18 +46,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 16 10:52:44 2026           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 23 10:32:04 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
 ; Top-level Entity Name              ; UNITYCONTROLLER                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 47                                              ;
+; Total logic elements               ; 10                                              ;
+;     Total combinational functions  ; 10                                              ;
+;     Dedicated logic registers      ; 9                                               ;
+; Total registers                    ; 9                                               ;
+; Total pins                         ; 56                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 72                                              ;
+; Total memory bits                  ; 18,432                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -159,26 +158,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
-; MICROPROGRAM.mif                 ; yes             ; User Memory Initialization File    ; C:/Users/Aluno/RafaelAlves/MICROPROGRAM.mif                             ;         ;
-; CONTROLSTORE.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd                             ;         ;
-; MPC_GENERATOR.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/MPC_GENERATOR.bdf                            ;         ;
-; UNITYCONTROLLER.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/UNITYCONTROLLER.bdf                          ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_ag81.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/RafaelAlves/db/altsyncram_ag81.tdf                       ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; CONTROLSTORE.vhd                 ; yes             ; User Wizard-Generated File             ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd                             ;         ;
+; MPC_GENERATOR.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/MPC_GENERATOR.bdf                            ;         ;
+; UNITYCONTROLLER.bdf              ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/UNITYCONTROLLER.bdf                          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_d581.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Aluno/RafaelAlves/db/altsyncram_d581.tdf                       ;         ;
+; microcode.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Aluno/RafaelAlves/microcode.mif                                ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -186,28 +185,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 10    ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 10    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 1     ;
+;     -- 3 input functions                    ; 8     ;
+;     -- <=2 input functions                  ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 10    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 9     ;
+;     -- Dedicated logic registers            ; 9     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 47    ;
-; Total memory bits                           ; 72    ;
+; I/O pins                                    ; 56    ;
+; Total memory bits                           ; 18432 ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLOCK ;
-; Maximum fan-out                             ; 36    ;
-; Total fan-out                               ; 72    ;
-; Average fan-out                             ; 0.87  ;
+; Maximum fan-out                             ; 45    ;
+; Total fan-out                               ; 453   ;
+; Average fan-out                             ; 4.08  ;
 +---------------------------------------------+-------+
 
 
@@ -216,21 +216,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; |UNITYCONTROLLER                          ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 47   ; 0            ; |UNITYCONTROLLER                                                                                  ; work         ;
-;    |CONTROLSTORE:inst|                    ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_ag81:auto_generated| ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated ; work         ;
+; |UNITYCONTROLLER                          ; 10 (0)            ; 9 (0)        ; 18432       ; 0            ; 0       ; 0         ; 56   ; 0            ; |UNITYCONTROLLER                                                                                  ; work         ;
+;    |CONTROLSTORE:inst|                    ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_d581:auto_generated| ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated ; work         ;
+;    |MPC_GENERATOR:inst1|                  ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|MPC_GENERATOR:inst1                                                              ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                 ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------+
-; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF              ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------+
-; CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 36           ; --           ; --           ; 18432 ; MICROPROGRAM.mif ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
+; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF           ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
+; CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 36           ; --           ; --           ; 18432 ; microcode.mif ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -242,23 +243,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; MPC_GENERATOR:inst4|inst3             ; Stuck at VCC due to stuck port data_in ;
-; MPC_GENERATOR:inst4|inst7[0..7]       ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 9 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 9     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -269,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------------------------------------------------------------------+
-; Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated ;
+; Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                        ;
 +---------------------------------+--------------------+------+-------------------------------------------+
@@ -320,7 +310,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                            ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
-; INIT_FILE                          ; MICROPROGRAM.mif     ; Untyped                            ;
+; INIT_FILE                          ; microcode.mif        ; Untyped                            ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                            ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                            ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                            ;
@@ -333,7 +323,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                            ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                            ;
 ; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                            ;
-; CBXI_PARAMETER                     ; altsyncram_ag81      ; Untyped                            ;
+; CBXI_PARAMETER                     ; altsyncram_d581      ; Untyped                            ;
 +------------------------------------+----------------------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -373,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 16 10:52:42 2026
+    Info: Processing started: Fri Oct 23 10:32:02 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC1 -c MIC1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memory.bdf
@@ -439,7 +429,7 @@ Info (12130): Elaborated megafunction instantiation "CONTROLSTORE:inst|altsyncra
 Info (12133): Instantiated megafunction "CONTROLSTORE:inst|altsyncram:altsyncram_component" with the following parameter:
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "MICROPROGRAM.mif"
+    Info (12134): Parameter "init_file" = "microcode.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -450,31 +440,20 @@ Info (12133): Instantiated megafunction "CONTROLSTORE:inst|altsyncram:altsyncram
     Info (12134): Parameter "widthad_a" = "9"
     Info (12134): Parameter "width_a" = "36"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ag81.tdf
-    Info (12023): Found entity 1: altsyncram_ag81
-Info (12128): Elaborating entity "altsyncram_ag81" for hierarchy "CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated"
-Info (12128): Elaborating entity "MPC_GENERATOR" for hierarchy "MPC_GENERATOR:inst4"
-Info (17036): Removed 8 MSB VCC or GND address nodes from RAM block "CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated|ALTSYNCRAM"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d581.tdf
+    Info (12023): Found entity 1: altsyncram_d581
+Info (12128): Elaborating entity "altsyncram_d581" for hierarchy "CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated"
+Info (12128): Elaborating entity "MPC_GENERATOR" for hierarchy "MPC_GENERATOR:inst1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "N"
-    Warning (15610): No output dependent on input pin "Z"
-    Warning (15610): No output dependent on input pin "MBR[7]"
-    Warning (15610): No output dependent on input pin "MBR[6]"
-    Warning (15610): No output dependent on input pin "MBR[5]"
-    Warning (15610): No output dependent on input pin "MBR[4]"
-    Warning (15610): No output dependent on input pin "MBR[3]"
-    Warning (15610): No output dependent on input pin "MBR[2]"
-    Warning (15610): No output dependent on input pin "MBR[1]"
-    Warning (15610): No output dependent on input pin "MBR[0]"
-Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 102 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 36 output pins
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 10 logic cells
     Info (21064): Implemented 36 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 399 megabytes
-    Info: Processing ended: Fri Oct 16 10:52:44 2026
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Fri Oct 23 10:32:04 2026
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
