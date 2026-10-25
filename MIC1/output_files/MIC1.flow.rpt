@@ -1,5 +1,5 @@
 Flow report for MIC1
-Fri Sep 18 10:51:06 2026
+Fri Oct 16 10:52:52 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Fri Sep 18 10:51:06 2026          ;
+; Flow Status                        ; Successful - Fri Oct 16 10:52:52 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
-; Top-level Entity Name              ; REGISTER_BANK                                   ;
+; Top-level Entity Name              ; UNITYCONTROLLER                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 0 / 4,608 ( 0 % )                               ;
+;     Total combinational functions  ; 0 / 4,608 ( 0 % )                               ;
+;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 47 / 89 ( 53 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 72 / 119,808 ( < 1 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
+; Device                             ; EP2C5T144C6                                     ;
+; Timing Models                      ; Final                                           ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -62,53 +64,73 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/18/2026 10:51:06 ;
+; Start date & time ; 10/16/2026 10:52:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIC1                ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                      ;
-+-------------------------------------+--------------------------------+---------------+---------------+----------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name   ; Section Id     ;
-+-------------------------------------+--------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589189.178973946600652 ; --            ; --            ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                            ; --            ; --            ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --            ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                           ; --            ; --            ; eda_simulation ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; REGISTER_BANK ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; REGISTER_BANK ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; REGISTER_BANK ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --            ; --             ;
-; TOP_LEVEL_ENTITY                    ; REGISTER_BANK                  ; MIC1          ; --            ; --             ;
-+-------------------------------------+--------------------------------+---------------+---------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+--------------------------------+---------------+-----------------+----------------+
+; Assignment Name                     ; Value                          ; Default Value ; Entity Name     ; Section Id     ;
++-------------------------------------+--------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 10995770589189.179215876316068 ; --            ; --              ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                            ; --            ; --              ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --              ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                           ; --            ; --              ; eda_simulation ;
+; IP_TOOL_NAME                        ; ROM: 1-PORT                    ; --            ; --              ; --             ;
+; IP_TOOL_NAME                        ; RAM: 2-PORT                    ; --            ; --              ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                           ; --            ; --              ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                           ; --            ; --              ; --             ;
+; MISC_FILE                           ; CONTROLSTORE.bsf               ; --            ; --              ; --             ;
+; MISC_FILE                           ; CONTROLSTORE.cmp               ; --            ; --              ; --             ;
+; MISC_FILE                           ; MIC1RAM.bsf                    ; --            ; --              ; --             ;
+; MISC_FILE                           ; MIC1RAM.cmp                    ; --            ; --              ; --             ;
+; PARTITION_COLOR                     ; 16764057                       ; --            ; UNITYCONTROLLER ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; UNITYCONTROLLER ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; UNITYCONTROLLER ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; UNITYCONTROLLER                ; MIC1          ; --              ; --             ;
++-------------------------------------+--------------------------------+---------------+-----------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 358 MB              ; 00:00:01                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 389 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 433 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 351 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 319 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 324 MB              ; 00:00:00                           ;
+; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:06                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-U6ALOMK  ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-U6ALOMK  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-U6ALOMK  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-U6ALOMK  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-U6ALOMK  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-U6ALOMK  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIC1 -c MIC1
+quartus_fit --read_settings_files=off --write_settings_files=off MIC1 -c MIC1
+quartus_asm --read_settings_files=off --write_settings_files=off MIC1 -c MIC1
+quartus_sta MIC1 -c MIC1
+quartus_eda --read_settings_files=off --write_settings_files=off MIC1 -c MIC1
 
 
 

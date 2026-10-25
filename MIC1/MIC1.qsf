@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY REGISTER_BANK
+set_global_assignment -name TOP_LEVEL_ENTITY UNITYCONTROLLER
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:24:07  MAY 26, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -49,6 +49,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE DATAPATH4.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE SP.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE TOS.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE OPC.vwf
@@ -80,7 +81,6 @@ set_global_assignment -name BDF_FILE ULA_1bit.bdf
 set_global_assignment -name BDF_FILE ULA_8bit.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE "ULA_8bit (1).vwf"
 set_global_assignment -name BDF_FILE Full.bdf
-set_global_assignment -name BDF_FILE ULA_8eeebit.bdf
 set_global_assignment -name BDF_FILE DECODER_2T04.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE DECODER_2T04.vwf
 set_global_assignment -name BDF_FILE MIC1.bdf
@@ -103,9 +103,15 @@ set_global_assignment -name BDF_FILE SP.bdf
 set_global_assignment -name BDF_FILE LV.bdf
 set_global_assignment -name BDF_FILE CPP.bdf
 set_global_assignment -name BDF_FILE TOS.bdf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/RafaelAlves/MDR.vwf"
 set_global_assignment -name BDF_FILE MBR.bdf
 set_global_assignment -name BDF_FILE REGISTER_BANK.bdf
+set_global_assignment -name BDF_FILE DATAPATH.bdf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/RafaelAlves/DATAPATH4.vwf"
+set_global_assignment -name MIF_FILE MICROPROGRAM.mif
+set_global_assignment -name QIP_FILE CONTROLSTORE.qip
+set_global_assignment -name QIP_FILE MIC1RAM.qip
+set_global_assignment -name BDF_FILE MPC_GENERATOR.bdf
+set_global_assignment -name BDF_FILE UNITYCONTROLLER.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

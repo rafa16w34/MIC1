@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC1
-Fri Sep 18 10:51:06 2026
+Fri Oct 16 10:52:44 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,18 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated
+ 13. Parameter Settings for User Entity Instance: CONTROLSTORE:inst|altsyncram:altsyncram_component
+ 14. altsyncram Parameter Settings by Entity Instance
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +47,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Sep 18 10:51:06 2026               ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 16 10:52:44 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
-; Top-level Entity Name              ; REGISTER_BANK                                   ;
+; Top-level Entity Name              ; UNITYCONTROLLER                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 47                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 72                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -58,7 +69,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; REGISTER_BANK      ; MIC1               ;
+; Top-level entity name                                                      ; UNITYCONTROLLER    ; MIC1               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -148,13 +159,221 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; MICROPROGRAM.mif                 ; yes             ; User Memory Initialization File    ; C:/Users/Aluno/RafaelAlves/MICROPROGRAM.mif                             ;         ;
+; CONTROLSTORE.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd                             ;         ;
+; MPC_GENERATOR.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/MPC_GENERATOR.bdf                            ;         ;
+; UNITYCONTROLLER.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/RafaelAlves/UNITYCONTROLLER.bdf                          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_ag81.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/RafaelAlves/db/altsyncram_ag81.tdf                       ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 47    ;
+; Total memory bits                           ; 72    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLOCK ;
+; Maximum fan-out                             ; 36    ;
+; Total fan-out                               ; 72    ;
+; Average fan-out                             ; 0.87  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
+; |UNITYCONTROLLER                          ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 47   ; 0            ; |UNITYCONTROLLER                                                                                  ; work         ;
+;    |CONTROLSTORE:inst|                    ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_ag81:auto_generated| ; 0 (0)             ; 0 (0)        ; 72          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------+
+; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF              ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------+
+; CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 36           ; --           ; --           ; 18432 ; MICROPROGRAM.mif ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                            ;
++--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File                             ;
++--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |UNITYCONTROLLER|CONTROLSTORE:inst ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; MPC_GENERATOR:inst4|inst3             ; Stuck at VCC due to stuck port data_in ;
+; MPC_GENERATOR:inst4|inst7[0..7]       ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 9 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                        ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
++---------------------------------+--------------------+------+-------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CONTROLSTORE:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------+
+; Parameter Name                     ; Value                ; Type                               ;
++------------------------------------+----------------------+------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                            ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                     ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                            ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                            ;
+; WIDTH_A                            ; 36                   ; Signed Integer                     ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                     ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                            ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                            ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                            ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                            ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                            ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                            ;
+; WIDTH_B                            ; 1                    ; Untyped                            ;
+; WIDTHAD_B                          ; 1                    ; Untyped                            ;
+; NUMWORDS_B                         ; 1                    ; Untyped                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                            ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                            ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                            ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                            ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                            ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                            ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                            ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                            ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                            ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                            ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                            ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                            ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                            ;
+; BYTE_SIZE                          ; 8                    ; Untyped                            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
+; INIT_FILE                          ; MICROPROGRAM.mif     ; Untyped                            ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                            ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                            ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                            ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                            ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                            ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                            ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                            ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                            ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                            ;
+; CBXI_PARAMETER                     ; altsyncram_ag81      ; Untyped                            ;
++------------------------------------+----------------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                              ;
++-------------------------------------------+---------------------------------------------------+
+; Name                                      ; Value                                             ;
++-------------------------------------------+---------------------------------------------------+
+; Number of entity instances                ; 1                                                 ;
+; Entity Instance                           ; CONTROLSTORE:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                               ;
+;     -- WIDTH_A                            ; 36                                                ;
+;     -- NUMWORDS_A                         ; 512                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                      ;
+;     -- WIDTH_B                            ; 1                                                 ;
+;     -- NUMWORDS_B                         ; 1                                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                            ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                      ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                              ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                         ;
++-------------------------------------------+---------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Sep 18 10:51:05 2026
+    Info: Processing started: Fri Oct 16 10:52:42 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC1 -c MIC1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memory.bdf
@@ -165,7 +384,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file ula_8bi
     Info (12023): Found entity 1: ULA_8bit
 Info (12021): Found 1 design units, including 1 entities, in source file full.bdf
     Info (12023): Found entity 1: Full
-Warning (12019): Can't analyze file -- file ULA_8eeebit.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_2t04.bdf
     Info (12023): Found entity 1: DECODER_2T04
 Info (12021): Found 1 design units, including 1 entities, in source file mic1.bdf
@@ -202,13 +420,62 @@ Info (12021): Found 1 design units, including 1 entities, in source file mbr.bdf
     Info (12023): Found entity 1: MBR
 Info (12021): Found 1 design units, including 1 entities, in source file register_bank.bdf
     Info (12023): Found entity 1: REGISTER_BANK
-Info (12127): Elaborating entity "REGISTER_BANK" for the top level hierarchy
-Error (275024): Width mismatch in port "PROGRAM_BYTE[7..0]" of instance "inst20" and type MBR -- source is ""IN_MBR[31..0]""
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 358 megabytes
-    Error: Processing ended: Fri Sep 18 10:51:06 2026
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.bdf
+    Info (12023): Found entity 1: DATAPATH
+Info (12021): Found 2 design units, including 1 entities, in source file controlstore.vhd
+    Info (12022): Found design unit 1: controlstore-SYN
+    Info (12023): Found entity 1: CONTROLSTORE
+Info (12021): Found 2 design units, including 1 entities, in source file mic1ram.vhd
+    Info (12022): Found design unit 1: mic1ram-SYN
+    Info (12023): Found entity 1: MIC1RAM
+Info (12021): Found 1 design units, including 1 entities, in source file mpc_generator.bdf
+    Info (12023): Found entity 1: MPC_GENERATOR
+Info (12021): Found 1 design units, including 1 entities, in source file unitycontroller.bdf
+    Info (12023): Found entity 1: UNITYCONTROLLER
+Info (12127): Elaborating entity "UNITYCONTROLLER" for the top level hierarchy
+Info (12128): Elaborating entity "CONTROLSTORE" for hierarchy "CONTROLSTORE:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "CONTROLSTORE:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "CONTROLSTORE:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "CONTROLSTORE:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "MICROPROGRAM.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "36"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ag81.tdf
+    Info (12023): Found entity 1: altsyncram_ag81
+Info (12128): Elaborating entity "altsyncram_ag81" for hierarchy "CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated"
+Info (12128): Elaborating entity "MPC_GENERATOR" for hierarchy "MPC_GENERATOR:inst4"
+Info (17036): Removed 8 MSB VCC or GND address nodes from RAM block "CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_ag81:auto_generated|ALTSYNCRAM"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "N"
+    Warning (15610): No output dependent on input pin "Z"
+    Warning (15610): No output dependent on input pin "MBR[7]"
+    Warning (15610): No output dependent on input pin "MBR[6]"
+    Warning (15610): No output dependent on input pin "MBR[5]"
+    Warning (15610): No output dependent on input pin "MBR[4]"
+    Warning (15610): No output dependent on input pin "MBR[3]"
+    Warning (15610): No output dependent on input pin "MBR[2]"
+    Warning (15610): No output dependent on input pin "MBR[1]"
+    Warning (15610): No output dependent on input pin "MBR[0]"
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21064): Implemented 36 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 399 megabytes
+    Info: Processing ended: Fri Oct 16 10:52:44 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
