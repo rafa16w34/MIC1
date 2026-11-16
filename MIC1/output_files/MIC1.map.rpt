@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC1
-Fri Oct 23 10:32:04 2026
+Fri Nov 13 10:57:18 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,12 +15,15 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. General Register Statistics
- 11. Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated
- 12. Parameter Settings for User Entity Instance: CONTROLSTORE:inst|altsyncram:altsyncram_component
- 13. altsyncram Parameter Settings by Entity Instance
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated
+ 15. Parameter Settings for User Entity Instance: UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 23 10:32:04 2026           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 13 10:57:18 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
-; Top-level Entity Name              ; UNITYCONTROLLER                                 ;
+; Top-level Entity Name              ; CPU                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 10                                              ;
-;     Total combinational functions  ; 10                                              ;
-;     Dedicated logic registers      ; 9                                               ;
-; Total registers                    ; 9                                               ;
-; Total pins                         ; 56                                              ;
+; Total logic elements               ; 702                                             ;
+;     Total combinational functions  ; 637                                             ;
+;     Dedicated logic registers      ; 309                                             ;
+; Total registers                    ; 309                                             ;
+; Total pins                         ; 224                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 18,432                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -68,7 +71,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; UNITYCONTROLLER    ; MIC1               ;
+; Top-level entity name                                                      ; CPU                ; MIC1               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,9 +166,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; ULA_1bit.bdf                     ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/ULA_1bit.bdf                                 ;         ;
+; ULA_8bit.bdf                     ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/ULA_8bit.bdf                                 ;         ;
+; DECODER_2T04.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/DECODER_2T04.bdf                             ;         ;
+; ULA_32bit.bdf                    ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/ULA_32bit.bdf                                ;         ;
+; SHIFTER.bdf                      ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/SHIFTER.bdf                                  ;         ;
+; REGISTER_8bit.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/REGISTER_8bit.bdf                            ;         ;
+; REGISTER_32bits.bdf              ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/REGISTER_32bits.bdf                          ;         ;
+; MDR.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/MDR.bdf                                      ;         ;
+; MAR.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/MAR.bdf                                      ;         ;
+; PC.bdf                           ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/PC.bdf                                       ;         ;
+; H.bdf                            ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/H.bdf                                        ;         ;
+; OPC.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/OPC.bdf                                      ;         ;
+; SP.bdf                           ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/SP.bdf                                       ;         ;
+; LV.bdf                           ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/LV.bdf                                       ;         ;
+; CPP.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/CPP.bdf                                      ;         ;
+; TOS.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/TOS.bdf                                      ;         ;
+; MBR.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/MBR.bdf                                      ;         ;
+; REGISTER_BANK.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/REGISTER_BANK.bdf                            ;         ;
+; DATAPATH.bdf                     ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/DATAPATH.bdf                                 ;         ;
 ; CONTROLSTORE.vhd                 ; yes             ; User Wizard-Generated File             ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd                             ;         ;
 ; MPC_GENERATOR.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/MPC_GENERATOR.bdf                            ;         ;
 ; UNITYCONTROLLER.bdf              ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/UNITYCONTROLLER.bdf                          ;         ;
+; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Aluno/RafaelAlves/CPU.bdf                                      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -177,6 +200,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_d581.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Aluno/RafaelAlves/db/altsyncram_d581.tdf                       ;         ;
 ; microcode.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Aluno/RafaelAlves/microcode.mif                                ;         ;
+; nor16.bdf                        ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/nor16.bdf           ;         ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -185,62 +209,226 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 10    ;
+; Estimated Total logic elements              ; 702   ;
 ;                                             ;       ;
-; Total combinational functions               ; 10    ;
+; Total combinational functions               ; 637   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1     ;
-;     -- 3 input functions                    ; 8     ;
-;     -- <=2 input functions                  ; 1     ;
+;     -- 4 input functions                    ; 374   ;
+;     -- 3 input functions                    ; 82    ;
+;     -- <=2 input functions                  ; 181   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 10    ;
+;     -- normal mode                          ; 637   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 9     ;
-;     -- Dedicated logic registers            ; 9     ;
+; Total registers                             ; 309   ;
+;     -- Dedicated logic registers            ; 309   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 56    ;
+; I/O pins                                    ; 224   ;
 ; Total memory bits                           ; 18432 ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CLOCK ;
-; Maximum fan-out                             ; 45    ;
-; Total fan-out                               ; 453   ;
-; Average fan-out                             ; 4.08  ;
+; Maximum fan-out node                        ; LOADN ;
+; Maximum fan-out                             ; 297   ;
+; Total fan-out                               ; 3389  ;
+; Average fan-out                             ; 2.81  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; |UNITYCONTROLLER                          ; 10 (0)            ; 9 (0)        ; 18432       ; 0            ; 0       ; 0         ; 56   ; 0            ; |UNITYCONTROLLER                                                                                  ; work         ;
-;    |CONTROLSTORE:inst|                    ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_d581:auto_generated| ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated ; work         ;
-;    |MPC_GENERATOR:inst1|                  ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNITYCONTROLLER|MPC_GENERATOR:inst1                                                              ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
+; |CPU                                         ; 637 (0)           ; 309 (0)      ; 18432       ; 0            ; 0       ; 0         ; 224  ; 0            ; |CPU                                                                                                        ; work         ;
+;    |DATAPATH:inst|                           ; 616 (0)           ; 299 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst                                                                                          ; work         ;
+;       |REGISTER_BANK:inst|                   ; 358 (145)         ; 299 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst                                                                       ; work         ;
+;          |CPP:inst16|                        ; 33 (1)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16                                                            ; work         ;
+;             |REGISTER_32bits:inst|           ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst                                       ; work         ;
+;                |REGISTER_8bit:inst3|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst3                   ; work         ;
+;                |REGISTER_8bit:inst4|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst4                   ; work         ;
+;                |REGISTER_8bit:inst6|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6                   ; work         ;
+;                |REGISTER_8bit:inst7|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7                   ; work         ;
+;          |H:inst19|                          ; 33 (1)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|H:inst19                                                              ; work         ;
+;             |REGISTER_32bits:inst|           ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst                                         ; work         ;
+;                |REGISTER_8bit:inst3|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst3                     ; work         ;
+;                |REGISTER_8bit:inst4|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst4                     ; work         ;
+;                |REGISTER_8bit:inst6|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6                     ; work         ;
+;                |REGISTER_8bit:inst7|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7                     ; work         ;
+;          |LV:inst10|                         ; 2 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|LV:inst10                                                             ; work         ;
+;             |REGISTER_32bits:inst|           ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|LV:inst10|REGISTER_32bits:inst                                        ; work         ;
+;                |REGISTER_8bit:inst3|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|LV:inst10|REGISTER_32bits:inst|REGISTER_8bit:inst3                    ; work         ;
+;                |REGISTER_8bit:inst4|         ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|LV:inst10|REGISTER_32bits:inst|REGISTER_8bit:inst4                    ; work         ;
+;                |REGISTER_8bit:inst6|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|LV:inst10|REGISTER_32bits:inst|REGISTER_8bit:inst6                    ; work         ;
+;                |REGISTER_8bit:inst7|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|LV:inst10|REGISTER_32bits:inst|REGISTER_8bit:inst7                    ; work         ;
+;          |MAR:inst12|                        ; 33 (1)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12                                                            ; work         ;
+;             |REGISTER_32bits:inst|           ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst                                       ; work         ;
+;                |REGISTER_8bit:inst3|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|REGISTER_8bit:inst3                   ; work         ;
+;                |REGISTER_8bit:inst4|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|REGISTER_8bit:inst4                   ; work         ;
+;                |REGISTER_8bit:inst6|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|REGISTER_8bit:inst6                   ; work         ;
+;                |REGISTER_8bit:inst7|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|REGISTER_8bit:inst7                   ; work         ;
+;          |MBR:inst1|                         ; 9 (1)             ; 10 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1                                                             ; work         ;
+;             |REGISTER_32bits:inst1|          ; 8 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1                                       ; work         ;
+;                |REGISTER_8bit:inst3|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3                   ; work         ;
+;                |REGISTER_8bit:inst7|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7                   ; work         ;
+;          |MDR:inst|                          ; 33 (1)            ; 33 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MDR:inst                                                              ; work         ;
+;             |REGISTER_32bits:inst|           ; 32 (32)           ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst                                         ; work         ;
+;                |REGISTER_8bit:inst3|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst3                     ; work         ;
+;                |REGISTER_8bit:inst4|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst4                     ; work         ;
+;                |REGISTER_8bit:inst6|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6                     ; work         ;
+;                |REGISTER_8bit:inst7|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7                     ; work         ;
+;          |OPC:inst11|                        ; 33 (1)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11                                                            ; work         ;
+;             |REGISTER_32bits:inst|           ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst                                       ; work         ;
+;                |REGISTER_8bit:inst3|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst3                   ; work         ;
+;                |REGISTER_8bit:inst4|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst4                   ; work         ;
+;                |REGISTER_8bit:inst6|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6                   ; work         ;
+;                |REGISTER_8bit:inst7|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7                   ; work         ;
+;          |PC:inst4|                          ; 2 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|PC:inst4                                                              ; work         ;
+;             |REGISTER_32bits:inst|           ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst                                         ; work         ;
+;                |REGISTER_8bit:inst3|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|REGISTER_8bit:inst3                     ; work         ;
+;                |REGISTER_8bit:inst4|         ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|REGISTER_8bit:inst4                     ; work         ;
+;                |REGISTER_8bit:inst6|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|REGISTER_8bit:inst6                     ; work         ;
+;                |REGISTER_8bit:inst7|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|REGISTER_8bit:inst7                     ; work         ;
+;          |SP:inst15|                         ; 2 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|SP:inst15                                                             ; work         ;
+;             |REGISTER_32bits:inst|           ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|SP:inst15|REGISTER_32bits:inst                                        ; work         ;
+;                |REGISTER_8bit:inst3|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|SP:inst15|REGISTER_32bits:inst|REGISTER_8bit:inst3                    ; work         ;
+;                |REGISTER_8bit:inst4|         ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|SP:inst15|REGISTER_32bits:inst|REGISTER_8bit:inst4                    ; work         ;
+;                |REGISTER_8bit:inst6|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|SP:inst15|REGISTER_32bits:inst|REGISTER_8bit:inst6                    ; work         ;
+;                |REGISTER_8bit:inst7|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|SP:inst15|REGISTER_32bits:inst|REGISTER_8bit:inst7                    ; work         ;
+;          |TOS:inst17|                        ; 33 (1)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17                                                            ; work         ;
+;             |REGISTER_32bits:inst|           ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst                                       ; work         ;
+;                |REGISTER_8bit:inst3|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst3                   ; work         ;
+;                |REGISTER_8bit:inst4|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst4                   ; work         ;
+;                |REGISTER_8bit:inst6|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6                   ; work         ;
+;                |REGISTER_8bit:inst7|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7                   ; work         ;
+;       |SHIFTER:inst2|                        ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|SHIFTER:inst2                                                                            ; work         ;
+;       |ULA_32bit:inst1|                      ; 203 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1                                                                          ; work         ;
+;          |ULA_8bit:inst13|                   ; 51 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13                                                          ; work         ;
+;             |ULA_1bit:inst1|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst1                                           ; work         ;
+;             |ULA_1bit:inst2|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst2                                           ; work         ;
+;             |ULA_1bit:inst3|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst3                                           ; work         ;
+;             |ULA_1bit:inst5|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst5                                           ; work         ;
+;             |ULA_1bit:inst6|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst6                                           ; work         ;
+;             |ULA_1bit:inst7|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst7                                           ; work         ;
+;             |ULA_1bit:inst8|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst8                                           ; work         ;
+;             |ULA_1bit:inst|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst13|ULA_1bit:inst                                            ; work         ;
+;          |ULA_8bit:inst1|                    ; 52 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1                                                           ; work         ;
+;             |ULA_1bit:inst1|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst1                                            ; work         ;
+;             |ULA_1bit:inst2|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst2                                            ; work         ;
+;             |ULA_1bit:inst3|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst3                                            ; work         ;
+;             |ULA_1bit:inst5|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst5                                            ; work         ;
+;             |ULA_1bit:inst6|                 ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst6                                            ; work         ;
+;             |ULA_1bit:inst7|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst7                                            ; work         ;
+;             |ULA_1bit:inst8|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst8                                            ; work         ;
+;             |ULA_1bit:inst|                  ; 7 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst                                             ; work         ;
+;                |DECODER_2T04:inst|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst1|ULA_1bit:inst|DECODER_2T04:inst                           ; work         ;
+;          |ULA_8bit:inst3|                    ; 52 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3                                                           ; work         ;
+;             |ULA_1bit:inst1|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst1                                            ; work         ;
+;             |ULA_1bit:inst2|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst2                                            ; work         ;
+;             |ULA_1bit:inst3|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst3                                            ; work         ;
+;             |ULA_1bit:inst5|                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst5                                            ; work         ;
+;             |ULA_1bit:inst6|                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst6                                            ; work         ;
+;             |ULA_1bit:inst7|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst7                                            ; work         ;
+;             |ULA_1bit:inst8|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst8                                            ; work         ;
+;             |ULA_1bit:inst|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst                                             ; work         ;
+;          |ULA_8bit:inst|                     ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst                                                            ; work         ;
+;             |ULA_1bit:inst1|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst1                                             ; work         ;
+;             |ULA_1bit:inst2|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst2                                             ; work         ;
+;             |ULA_1bit:inst3|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst3                                             ; work         ;
+;             |ULA_1bit:inst5|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst5                                             ; work         ;
+;             |ULA_1bit:inst6|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst6                                             ; work         ;
+;             |ULA_1bit:inst7|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst7                                             ; work         ;
+;             |ULA_1bit:inst8|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst8                                             ; work         ;
+;             |ULA_1bit:inst|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst                                              ; work         ;
+;    |UNITYCONTROLLER:inst1|                   ; 21 (0)            ; 10 (1)       ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UNITYCONTROLLER:inst1                                                                                  ; work         ;
+;       |CONTROLSTORE:inst|                    ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UNITYCONTROLLER:inst1|CONTROLSTORE:inst                                                                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component                                ; work         ;
+;             |altsyncram_d581:auto_generated| ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated ; work         ;
+;       |MPC_GENERATOR:inst1|                  ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1                                                              ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                              ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
-; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF           ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
-; CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 36           ; --           ; --           ; 18432 ; microcode.mif ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                    ;
++-------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
+; Name                                                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF           ;
++-------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
+; UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 36           ; --           ; --           ; 18432 ; microcode.mif ;
++-------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                            ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File                             ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |UNITYCONTROLLER|CONTROLSTORE:inst ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------+---------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                              ; IP Include File                             ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------+---------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|UNITYCONTROLLER:inst1|CONTROLSTORE:inst ; C:/Users/Aluno/RafaelAlves/CONTROLSTORE.vhd ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                            ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                   ; Reason for Removal                                                                                          ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst300099 ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst3      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst3      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst6      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst6      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst9      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst9      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst13     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst13     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst16     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst16     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst20     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst20     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst4|inst23     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst300099 ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst300099 ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst3      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst3      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst6      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst6      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst9      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst9      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst13     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst13     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst16     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst16     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst20     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst20     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst6|inst23     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst300099 ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst300099 ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst3      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst3      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst6      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst6      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst9      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst9      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst13     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst13     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst16     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst16     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst20     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst20     ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099  ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099  ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst9       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst6       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst3       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst300099  ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst23      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst20      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst20     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst16      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst16     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst13      ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst13     ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst9       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst9      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst6       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst6      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst3       ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst3      ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|REGISTER_8bit:inst3|inst300099  ; Merged with DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst300099 ;
+; Total Number of Removed Registers = 55                                                          ;                                                                                                             ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -248,104 +436,224 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9     ;
+; Total registers                              ; 309   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 297   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Source assignments for CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated ;
-+---------------------------------+--------------------+------+-------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                        ;
-+---------------------------------+--------------------+------+-------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
-+---------------------------------+--------------------+------+-------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                              ;
++-------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                               ; Fan out ;
++-------------------------------------------------------------------------------------------------+---------+
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst3|inst23     ; 4       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst1|REGISTER_8bit:inst7|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst20       ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst16       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst13       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst9        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst6        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst3        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099   ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099   ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst7|inst300099 ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst23       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst16       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst13       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst9        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst6        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3      ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst3        ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099   ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099 ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst6|inst300099   ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst23       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst20       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst16       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13       ; 2       ;
+; DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; 1       ;
+; DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11|REGISTER_32bits:inst|REGISTER_8bit:inst4|inst13     ; 1       ;
+; Total number of inverted registers = 204*                                                       ;         ;
++-------------------------------------------------------------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CONTROLSTORE:inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+------------------------------------+
-; Parameter Name                     ; Value                ; Type                               ;
-+------------------------------------+----------------------+------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                            ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                         ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                       ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                       ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                     ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                            ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                            ;
-; WIDTH_A                            ; 36                   ; Signed Integer                     ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer                     ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer                     ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                            ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                            ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                            ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                            ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                            ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                            ;
-; WIDTH_B                            ; 1                    ; Untyped                            ;
-; WIDTHAD_B                          ; 1                    ; Untyped                            ;
-; NUMWORDS_B                         ; 1                    ; Untyped                            ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                            ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                            ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                            ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                            ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                            ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                            ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                            ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                            ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                            ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                            ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                            ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                            ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                     ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                            ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                            ;
-; BYTE_SIZE                          ; 8                    ; Untyped                            ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                            ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
-; INIT_FILE                          ; microcode.mif        ; Untyped                            ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                            ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                            ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                            ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                            ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                            ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                            ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                            ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                            ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                            ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                            ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                            ;
-; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                            ;
-; CBXI_PARAMETER                     ; altsyncram_d581      ; Untyped                            ;
-+------------------------------------+----------------------+------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 9:1                ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; No         ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OUT_B[6]  ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |CPU|DATAPATH:inst|REGISTER_BANK:inst|OUT_B[31] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                     ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                  ;
+; WIDTH_A                            ; 36                   ; Signed Integer                                           ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                           ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; INIT_FILE                          ; microcode.mif        ; Untyped                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_d581      ; Untyped                                                  ;
++------------------------------------+----------------------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                              ;
-+-------------------------------------------+---------------------------------------------------+
-; Name                                      ; Value                                             ;
-+-------------------------------------------+---------------------------------------------------+
-; Number of entity instances                ; 1                                                 ;
-; Entity Instance                           ; CONTROLSTORE:inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                               ;
-;     -- WIDTH_A                            ; 36                                                ;
-;     -- NUMWORDS_A                         ; 512                                               ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                      ;
-;     -- WIDTH_B                            ; 1                                                 ;
-;     -- NUMWORDS_B                         ; 1                                                 ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                            ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                      ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                              ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                         ;
-+-------------------------------------------+---------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                    ;
++-------------------------------------------+-------------------------------------------------------------------------+
+; Name                                      ; Value                                                                   ;
++-------------------------------------------+-------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                       ;
+; Entity Instance                           ; UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                     ;
+;     -- WIDTH_A                            ; 36                                                                      ;
+;     -- NUMWORDS_A                         ; 512                                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
+;     -- WIDTH_B                            ; 1                                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ;
++-------------------------------------------+-------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -353,7 +661,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -363,7 +671,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 23 10:32:02 2026
+    Info: Processing started: Fri Nov 13 10:57:14 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC1 -c MIC1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memory.bdf
@@ -422,11 +730,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file mpc_gen
     Info (12023): Found entity 1: MPC_GENERATOR
 Info (12021): Found 1 design units, including 1 entities, in source file unitycontroller.bdf
     Info (12023): Found entity 1: UNITYCONTROLLER
-Info (12127): Elaborating entity "UNITYCONTROLLER" for the top level hierarchy
-Info (12128): Elaborating entity "CONTROLSTORE" for hierarchy "CONTROLSTORE:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "CONTROLSTORE:inst|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "CONTROLSTORE:inst|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "CONTROLSTORE:inst|altsyncram:altsyncram_component" with the following parameter:
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
+    Info (12023): Found entity 1: CPU
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Info (12128): Elaborating entity "UNITYCONTROLLER" for hierarchy "UNITYCONTROLLER:inst1"
+Info (12128): Elaborating entity "CONTROLSTORE" for hierarchy "UNITYCONTROLLER:inst1|CONTROLSTORE:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component" with the following parameter:
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "microcode.mif"
@@ -442,19 +753,225 @@ Info (12133): Instantiated megafunction "CONTROLSTORE:inst|altsyncram:altsyncram
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d581.tdf
     Info (12023): Found entity 1: altsyncram_d581
-Info (12128): Elaborating entity "altsyncram_d581" for hierarchy "CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated"
-Info (12128): Elaborating entity "MPC_GENERATOR" for hierarchy "MPC_GENERATOR:inst1"
+Info (12128): Elaborating entity "altsyncram_d581" for hierarchy "UNITYCONTROLLER:inst1|CONTROLSTORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated"
+Info (12128): Elaborating entity "MPC_GENERATOR" for hierarchy "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1"
+Info (12128): Elaborating entity "DATAPATH" for hierarchy "DATAPATH:inst"
+Info (12128): Elaborating entity "SHIFTER" for hierarchy "DATAPATH:inst|SHIFTER:inst2"
+Info (12128): Elaborating entity "NOR16" for hierarchy "DATAPATH:inst|SHIFTER:inst2|NOR16:inst15"
+Info (12130): Elaborated megafunction instantiation "DATAPATH:inst|SHIFTER:inst2|NOR16:inst15"
+Info (12128): Elaborating entity "DECODER_2T04" for hierarchy "DATAPATH:inst|SHIFTER:inst2|DECODER_2T04:inst"
+Info (12128): Elaborating entity "ULA_32bit" for hierarchy "DATAPATH:inst|ULA_32bit:inst1"
+Info (12128): Elaborating entity "ULA_8bit" for hierarchy "DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3"
+Info (12128): Elaborating entity "ULA_1bit" for hierarchy "DATAPATH:inst|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst8"
+Info (12128): Elaborating entity "REGISTER_BANK" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst"
+Info (12128): Elaborating entity "MAR" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12"
+Info (12128): Elaborating entity "REGISTER_32bits" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst"
+Info (12128): Elaborating entity "REGISTER_8bit" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|REGISTER_8bit:inst3"
+Info (12128): Elaborating entity "H" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|H:inst19"
+Info (12128): Elaborating entity "MDR" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst"
+Info (12128): Elaborating entity "MBR" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1"
+Warning (275011): Block or symbol "NOT" of instance "inst7" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst10" overlaps another block or symbol
+Info (12128): Elaborating entity "SP" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|SP:inst15"
+Info (12128): Elaborating entity "LV" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|LV:inst10"
+Info (12128): Elaborating entity "CPP" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|CPP:inst16"
+Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Info (12128): Elaborating entity "TOS" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|TOS:inst17"
+Warning (275011): Block or symbol "NOT" of instance "inst3" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Info (12128): Elaborating entity "OPC" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|OPC:inst11"
+Info (12128): Elaborating entity "PC" for hierarchy "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[31]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[30]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[29]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[28]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[27]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[26]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[25]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[24]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[23]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[22]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[21]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[20]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[19]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[18]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[17]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[16]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[15]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[14]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[13]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[12]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[11]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[10]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[9]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[8]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[7]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[6]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[5]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[4]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[3]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[2]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[1]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|REGISTER_BANK:inst|OUT_B[0]" into a selector
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[31]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[30]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[29]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[28]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[27]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[26]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[25]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[24]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[23]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[22]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[21]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[20]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[19]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[18]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[17]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[16]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[15]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[14]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[13]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[12]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|H:inst19|REGISTER_32bits:inst|inst10[0]" feeding internal logic into a wire
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[31]" to the node "DATA_MEM_ADDR[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[30]" to the node "DATA_MEM_ADDR[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[29]" to the node "DATA_MEM_ADDR[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[28]" to the node "DATA_MEM_ADDR[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[27]" to the node "DATA_MEM_ADDR[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[26]" to the node "DATA_MEM_ADDR[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[25]" to the node "DATA_MEM_ADDR[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[24]" to the node "DATA_MEM_ADDR[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[23]" to the node "DATA_MEM_ADDR[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[22]" to the node "DATA_MEM_ADDR[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[21]" to the node "DATA_MEM_ADDR[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[20]" to the node "DATA_MEM_ADDR[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[19]" to the node "DATA_MEM_ADDR[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[18]" to the node "DATA_MEM_ADDR[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[17]" to the node "DATA_MEM_ADDR[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[16]" to the node "DATA_MEM_ADDR[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[15]" to the node "DATA_MEM_ADDR[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[14]" to the node "DATA_MEM_ADDR[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[13]" to the node "DATA_MEM_ADDR[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[12]" to the node "DATA_MEM_ADDR[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[11]" to the node "DATA_MEM_ADDR[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[10]" to the node "DATA_MEM_ADDR[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[9]" to the node "DATA_MEM_ADDR[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[8]" to the node "DATA_MEM_ADDR[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[7]" to the node "DATA_MEM_ADDR[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[6]" to the node "DATA_MEM_ADDR[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[5]" to the node "DATA_MEM_ADDR[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[4]" to the node "DATA_MEM_ADDR[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[3]" to the node "DATA_MEM_ADDR[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[2]" to the node "DATA_MEM_ADDR[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[1]" to the node "DATA_MEM_ADDR[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MAR:inst12|REGISTER_32bits:inst|inst11[0]" to the node "DATA_MEM_ADDR[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[31]" to the node "DATA_MEM_OUT[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[30]" to the node "DATA_MEM_OUT[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[29]" to the node "DATA_MEM_OUT[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[28]" to the node "DATA_MEM_OUT[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[27]" to the node "DATA_MEM_OUT[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[26]" to the node "DATA_MEM_OUT[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[25]" to the node "DATA_MEM_OUT[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[24]" to the node "DATA_MEM_OUT[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[23]" to the node "DATA_MEM_OUT[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[22]" to the node "DATA_MEM_OUT[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[21]" to the node "DATA_MEM_OUT[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[20]" to the node "DATA_MEM_OUT[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[19]" to the node "DATA_MEM_OUT[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[18]" to the node "DATA_MEM_OUT[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[17]" to the node "DATA_MEM_OUT[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[16]" to the node "DATA_MEM_OUT[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[15]" to the node "DATA_MEM_OUT[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[14]" to the node "DATA_MEM_OUT[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[13]" to the node "DATA_MEM_OUT[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[12]" to the node "DATA_MEM_OUT[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[11]" to the node "DATA_MEM_OUT[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[10]" to the node "DATA_MEM_OUT[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[9]" to the node "DATA_MEM_OUT[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[8]" to the node "DATA_MEM_OUT[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[7]" to the node "DATA_MEM_OUT[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[6]" to the node "DATA_MEM_OUT[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[5]" to the node "DATA_MEM_OUT[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[4]" to the node "DATA_MEM_OUT[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[3]" to the node "DATA_MEM_OUT[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[2]" to the node "DATA_MEM_OUT[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[1]" to the node "DATA_MEM_OUT[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MDR:inst|REGISTER_32bits:inst|inst11[0]" to the node "DATA_MEM_OUT[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[31]" to the node "PC[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[30]" to the node "PC[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[29]" to the node "PC[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[28]" to the node "PC[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[27]" to the node "PC[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[26]" to the node "PC[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[25]" to the node "PC[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[24]" to the node "PC[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[23]" to the node "PC[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[22]" to the node "PC[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[21]" to the node "PC[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[20]" to the node "PC[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[19]" to the node "PC[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[18]" to the node "PC[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[17]" to the node "PC[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[16]" to the node "PC[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[15]" to the node "PC[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[14]" to the node "PC[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[13]" to the node "PC[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[12]" to the node "PC[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[11]" to the node "PC[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[10]" to the node "PC[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[9]" to the node "PC[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[8]" to the node "PC[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[7]" to the node "PC[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[6]" to the node "PC[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[5]" to the node "PC[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[4]" to the node "PC[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[3]" to the node "PC[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[2]" to the node "PC[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[1]" to the node "PC[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|PC:inst4|REGISTER_32bits:inst|inst11[0]" to the node "PC[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[7]" to the node "MBR_OUT[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[6]" to the node "MBR_OUT[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[5]" to the node "MBR_OUT[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[4]" to the node "MBR_OUT[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[3]" to the node "MBR_OUT[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[2]" to the node "MBR_OUT[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[1]" to the node "MBR_OUT[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[0]" to the node "MBR_OUT[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[7]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[6]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[5]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[4]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[3]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[2]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[1]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|REGISTER_BANK:inst|MBR:inst1|REGISTER_32bits:inst|inst11[0]" to the node "UNITYCONTROLLER:inst1|MPC_GENERATOR:inst1|inst5[0]" into a wire
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 102 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 10 logic cells
+Info (21057): Implemented 994 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 42 input pins
+    Info (21059): Implemented 182 output pins
+    Info (21061): Implemented 734 logic cells
     Info (21064): Implemented 36 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 391 megabytes
-    Info: Processing ended: Fri Oct 23 10:32:04 2026
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 184 warnings
+    Info: Peak virtual memory: 403 megabytes
+    Info: Processing ended: Fri Nov 13 10:57:18 2026
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
